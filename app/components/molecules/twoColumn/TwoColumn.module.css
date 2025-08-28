@@ -1,0 +1,18 @@
+.TwoColumnGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
+    width: '100%';
+    padding-top: var(--layoutSpacing);
+    height: var(--containerHeight);
+}
+
+.ColumnOne {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.ColumnTwo {
+    display: flex;
+    justify-content: flex-end;
+}

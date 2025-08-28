@@ -1,0 +1,70 @@
+:root {
+  --black: #1e1e1e;
+
+  --font-primary: 'Sora', sans-serif;
+  --sidePadding: 24px;
+  --gap: 12px;
+  --layoutSpacing: 36px;
+  --containerHeight: 50vw;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  max-width: 1920px;
+}
+
+body {
+  padding-left: var(--sidePadding);
+  padding-right: var(--sidePadding);
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-family: var(--font-primary);
+  color: var(--black);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 20vw, 20rem);
+  font-weight: 700;
+  letter-spacing: -1vw;
+  margin-bottom: -3vw;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+
+}
