@@ -3,11 +3,16 @@
 import Image from 'next/image';
 import styles from './MediaBlock.module.css';
 
-const MediaBlock = ({ image, alt = 'Media Image', style = {} }) => {
+const MediaBlock = ({ image, alt = 'Media Image', fit, style = {} }) => {
   return (
     <div 
       className={styles.mediaWrapper}
-      style={{ ...style }}
+      style={{
+        ...(fit === 'height'
+          ? { width: '100%', height: 'auto' }
+          : { width: 'auto', height: '100%' }),
+        ...style,
+      }}
     >
       <Image
         src={image}
