@@ -2,17 +2,23 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--gap);
-    width: '100%';
-    padding-top: var(--layoutSpacing);
+    width: 100%;
+    margin-top: var(--layoutSpacing);
     height: var(--containerHeight);
+    /* border: 1px solid red; */
 }
 
 .ColumnOne {
     display: flex;
     justify-content: flex-start;
+    /* border: 1px solid green; */
+    height: var(--containerHeight);
 }
 
 .ColumnTwo {
     display: flex;
+    position: relative;
     justify-content: flex-end;
+    /* border: 1px solid green; */
+    height: var(--containerHeight);
 }

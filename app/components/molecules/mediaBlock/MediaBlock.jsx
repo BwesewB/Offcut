@@ -12,7 +12,6 @@ const MediaBlock = ({ image, alt = 'Media Image', style = {} }) => {
       <Image
         src={image}
         alt={alt}
-        // fill
         width={image.width}
         height={image.height}
         className={styles.mediaImage}

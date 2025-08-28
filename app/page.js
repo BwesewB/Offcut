@@ -24,6 +24,7 @@ export default function Home() {
           // }
           right={
             <MediaBlock image={rock3vert} alt="A stone on a white background"/>
+            // <p>hi</p>
           }
         />
       
