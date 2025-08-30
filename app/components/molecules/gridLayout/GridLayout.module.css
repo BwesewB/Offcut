@@ -1,0 +1,17 @@
+.Grid {
+  display: grid;
+  gap: var(--gap);
+  width: 100%;
+}
+
+.ColumnOne,
+.ColumnTwo,
+.ColumnThree,
+.ColumnFour,
+.ColumnFive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--containerHeight);
+  /* border: 1px solid green; */
+}
