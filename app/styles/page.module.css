@@ -13,8 +13,38 @@
 .section {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  column-gap: var(--gap);
   width: 100%;
-  min-height: 150vh;
+  /* row-gap: 20svh; */
+}
+
+.textSection1 {
+  grid-column: 2/6;
+}
+
+.textSection1 .indentFirstLine {
+  /* ensure a known line-height; set your own value */
+  line-height: 1.1;
+  --lh: 1.1;
+
+  /* width of ONE track within the 4-track span (cols 2–5) + one gap:
+     trackW = (100% - 3*gap) / 4;  indent = trackW + gap  */
+  --indent: calc((100% - (3 * var(--gap))) / 4 + var(--gap));
+}
+
+/* the trick: a 1-line tall float that pushes ONLY the first line right */
+.textSection1 .indentFirstLine::before {
+  content: "";
+  float: left;
+  width: var(--indent);
+  /* height: 1lh is best; fallback uses your --lh */
+  height: 1lh;
+  height: calc(1em * var(--lh));
+}
+
+/* tidy */
+.textSection1 p {
+  margin: 0;
 }
 
 .heroContainer {
@@ -25,8 +55,4 @@
   justify-content: center;
   align-items: center;
   border: 1px solid red;
-}
-
-.sectionOne {
-  height: 80svh;
 }

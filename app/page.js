@@ -16,18 +16,24 @@ export default function Home() {
     <>
     <ScrollCycle
       sectionA={
-        <section className={styles.section} style={{ border: '1px solid blue' }}>
+        <section className="pageLayout" style={{ border: '1px solid blue' }}>
           <div className={styles.heroContainer}>
             <h1 className={styles.title}>OFFCUT</h1>
           </div>
-          <div className={styles.sectionOne}>
-            <h2>info</h2>
+          <div style={{height: '80svh', display: 'flex', placeItems: 'center'}} >
+            <div className={styles.section}>
+              <h2>info</h2>
+              <div className={styles.textSection1}>
+                <p className={`${"plarge"} ${styles.indentFirstLine}`}>Offcut is a personal study of material left in its natural state, shaped but not polished. A further exploration can reveal that value isn't always in what is resolved, but in what resists being made familiar.</p>
+              </div>
+            </div>
           </div>
+
           
         </section>
       }
       sectionB={
-        <section className={styles.section} style={{ border: '1px solid red' }}>
+        <section className="pageLayout" style={{ border: '1px solid red' }}>
           <h1>Section B</h1>
         </section>
       }
