@@ -7,14 +7,15 @@
 }
 
 .title {
-  font-size: 100px;
+
 }
 
 .section {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   width: 100%;
-  min-height: 150vh;
+  min-height: '150vh';
+  place-items: center;
 }
 
 .heroContainer {
@@ -22,11 +23,7 @@
   width: 100%;
   display: flex;
   grid-column: 1/6;
-  justify-content: center;
+  place-items: center;
   align-items: center;
   border: 1px solid red;
-}
-
-.sectionOne {
-  height: 80svh;
 }

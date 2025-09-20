@@ -20,10 +20,7 @@ export default function Home() {
           <div className={styles.heroContainer}>
             <h1 className={styles.title}>OFFCUT</h1>
           </div>
-          <div className={styles.sectionOne}>
-            <h2>info</h2>
-          </div>
-          
+          <h1>Section A</h1>
         </section>
       }
       sectionB={

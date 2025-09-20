@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   width: 100%;
-  min-height: 150vh;
+  min-height: '150vh';
 }
 
 .heroContainer {
@@ -25,8 +25,4 @@
   justify-content: center;
   align-items: center;
   border: 1px solid red;
-}
-
-.sectionOne {
-  height: 80svh;
 }

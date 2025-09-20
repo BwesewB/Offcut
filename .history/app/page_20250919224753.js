@@ -16,29 +16,23 @@ export default function Home() {
     <>
     <ScrollCycle
       sectionA={
-        <section className={styles.section} style={{ border: '1px solid blue' }}>
-          <div className={styles.heroContainer}>
-            <h1 className={styles.title}>OFFCUT</h1>
-          </div>
-          <div className={styles.sectionOne}>
-            <h2>info</h2>
-          </div>
-          
+        <section style={{ minHeight: '150svh', display: 'grid', placeItems: 'center', zIndex: 10, backgroundColor: 'var(--white)' }}>
+          <h1>Section A</h1>
         </section>
       }
       sectionB={
-        <section className={styles.section} style={{ border: '1px solid red' }}>
+        <section style={{ minHeight: '150svh', display: 'grid', placeItems: 'center'}}>
           <h1>Section B</h1>
         </section>
       }
       bottomStripA={
-        <div style={{ height: '100%', display: 'grid', placeItems: 'center', border: '1px solid green' }}>
+        <div style={{ height: '100%', display: 'grid', placeItems: 'center' }}>
           <p>Bottom strip (A)</p>
         </div>
       }
       topStripB={
-        <div style={{ height: '100%', display: 'grid', placeItems: 'center' }}>
-          <p className="plarge" style={{userSelect: 'none'}}>unf__ished</p>
+        <div style={{ height: '100%', display: 'grid', placeItems: 'center'}}>
+          <p>Top strip (B)</p>
         </div>
       }
     />

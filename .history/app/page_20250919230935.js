@@ -17,17 +17,14 @@ export default function Home() {
     <ScrollCycle
       sectionA={
         <section className={styles.section} style={{ border: '1px solid blue' }}>
-          <div className={styles.heroContainer}>
+          <div>
             <h1 className={styles.title}>OFFCUT</h1>
           </div>
-          <div className={styles.sectionOne}>
-            <h2>info</h2>
-          </div>
-          
+          <h1>Section A</h1>
         </section>
       }
       sectionB={
-        <section className={styles.section} style={{ border: '1px solid red' }}>
+        <section style={{ minHeight: '150svh', display: 'grid', placeItems: 'center', border: '1px solid red' }}>
           <h1>Section B</h1>
         </section>
       }

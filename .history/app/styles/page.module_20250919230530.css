@@ -7,26 +7,24 @@
 }
 
 .title {
-  font-size: 100px;
+
 }
 
 .section {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   width: 100%;
-  min-height: 150vh;
+  min-height: '150svh';
+  place-items: center;
+  background-color: black;
 }
 
 .heroContainer {
-  height: 100svh;
-  width: 100%;
+  min-height: 100svh;
+  height: max(100svh, 90vw);
+  /* border: 1px solid green; */
   display: flex;
-  grid-column: 1/6;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid red;
-}
-
-.sectionOne {
-  height: 80svh;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-bottom: var(--sidePadding);
 }

@@ -78,6 +78,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+p {
+  font-family: var(--font-secondary);
+  font-weight: 500;
+  color: var(--black);
+  line-height: 1.2;
+  font-size: 0.875rem;
+}
+
 h1 {
   font-size: clamp(3rem, 5vw, 4rem);
   font-weight: 400;
@@ -85,22 +93,8 @@ h1 {
   text-transform: uppercase;
 }
 
-h2 {
-  font-size: 2.25rem;
-  font-weight: 400;
-  letter-spacing: clamp(-2px, -0.3vw, -1px);
-  text-transform: uppercase;
-}
-
-p {
-  font-family: var(--font-secondary);
-  font-weight: 500;
-  line-height: 1.2;
-  font-size: 0.875rem;
-}
-
 .plarge {
-  font-size: 4rem;
+  font-size: 64px;
   font-weight: 600;
 }
 
@@ -119,4 +113,8 @@ a {
   display: flex;
   flex-direction: column;
   gap: var(--layoutSpacing);
+}
+
+@media (prefers-color-scheme: dark) {
+
 }

@@ -1,19 +1,44 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
-export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStripB }) {
+export default function ScrollCycle({
+  sectionA,
+  sectionB,
+  bottomStripA,
+  topStripB,
+}) {
   const [main, setMain] = useState('A');            // 'A' | 'B'
   const [tbUnlocked, setTbUnlocked] = useState(false);
   const [tbHeight, setTbHeight] = useState(0);
 
-  const topRef = useRef(null);
-  const bottomRef = useRef(null);
-  const topBufferRef = useRef(null);
+  // sentinels & refs
+  const topRef = useRef(null);        // absolute document top (fires at scrollY === 0)
+  const bottomRef = useRef(null);     // 👈 at the very end of the page (after Bottom Buffer)
+  const topBufferRef = useRef(null);  // Top Buffer element (for gate)
   const gateActiveRef = useRef(false);
 
+  // guards
   const lockRef = useRef(false);
   const enforcingRef = useRef(false);
 
+  // --- helpers ---
+
+  // We rarely pin now; leaving the helpers in case you want to re-enable.
+  const pinTo = (edge) => {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        if (edge === 'bottom') {
+          const h = document.documentElement.scrollHeight || document.body.scrollHeight;
+          window.scrollTo({ top: h, behavior: 'auto' });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+        setTimeout(() => { lockRef.current = false; }, 180);
+      });
+    });
+  };
+
+  // While TB is locked, keep the user from scrolling into it (stay at ≥ tbHeight)
   const enforceTbLock = () => {
     if (tbUnlocked || tbHeight <= 0) return;
     const y = window.scrollY || 0;
@@ -24,6 +49,8 @@ export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStrip
     }
   };
 
+  // After returning to A (with TB visible/unlocked), hide TB once you scroll past it,
+  // compensating the scroll so there’s no visual jump.
   const activateGate = () => {
     if (gateActiveRef.current) return;
     gateActiveRef.current = true;
@@ -33,13 +60,21 @@ export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStrip
       if (!tbEl) return;
       const rect = tbEl.getBoundingClientRect();
       if (rect.bottom <= 0) {
+        // 1) Force instant scroll (no smooth)
         const html = document.documentElement;
         const prevBehavior = html.style.scrollBehavior;
         html.style.scrollBehavior = 'auto';
+
+        // 2) Compensate scroll BEFORE locking TB so layout change doesn’t flash
         const target = Math.max(0, (window.scrollY || 0) - tbHeight);
         window.scrollTo(0, target);
+
+        // 3) Lock TB again (still same frame)
         setTbUnlocked(false);
+
+        // 4) Restore scroll behavior
         html.style.scrollBehavior = prevBehavior || '';
+
         window.removeEventListener('scroll', onScroll);
         gateActiveRef.current = false;
       }
@@ -48,12 +83,15 @@ export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStrip
     window.addEventListener('scroll', onScroll, { passive: true });
   };
 
+  // --- initial setup ---
   useEffect(() => {
     const vh = window.innerHeight || 0;
     setTbHeight(vh);
+    // Start user at the top of MAIN (i.e., just below TB). TB is locked, so you can't enter it.
     window.scrollTo({ top: vh, behavior: 'auto' });
   }, []);
 
+  // Enforce TB lock whenever scrolling (only when TB is locked)
   useEffect(() => {
     if (tbUnlocked) return;
     const onScroll = () => enforceTbLock();
@@ -61,46 +99,32 @@ export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStrip
     return () => window.removeEventListener('scroll', onScroll);
   }, [tbUnlocked, tbHeight]);
 
-  // --- Bottom observer (more forgiving) + scroll fallback ---
+  // Bottom observer — now at the very end of the page (after Bottom Buffer)
   useEffect(() => {
     const el = bottomRef.current;
     if (!el) return;
 
-    const hitBottom = () => {
-      if (lockRef.current) return;
+    const onHitBottom = (entry) => {
+      if (!entry.isIntersecting || lockRef.current) return;
       lockRef.current = true;
+
+      // Swap A -> B and unlock TB (no programmatic scroll → no jump).
       setMain('B');
       setTbUnlocked(true);
+
       setTimeout(() => { lockRef.current = false; }, 120);
     };
 
-    // IO: fire when any part of the sentinel is visible, with a tiny negative margin
     const io = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) hitBottom();
-      },
-      { root: null, threshold: 0, rootMargin: '0px 0px -1px 0px' }
+      (entries) => onHitBottom(entries[0]),
+      { root: null, threshold: 1 } // true bottom only
     );
+
     io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
-    // Fallback: if we're within 2px of bottom, consider it bottom
-    const onScroll = () => {
-      if (main !== 'A' || tbUnlocked) return; // only in initial A phase (TB locked)
-      const doc = document.documentElement;
-      const bottomY = (window.scrollY || 0) + (window.innerHeight || 0);
-      const maxY = Math.max(doc.scrollHeight, document.body.scrollHeight);
-      if (maxY - bottomY <= 2) hitBottom();
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-
-    return () => {
-      io.disconnect();
-      window.removeEventListener('scroll', onScroll);
-    };
-  }, [main, tbUnlocked]);
-
-  // Top observer — only when TB is unlocked (you can reach scrollY === 0)
+  // Top observer — only meaningful when TB is unlocked (so you can reach scrollY === 0)
   useEffect(() => {
     const el = topRef.current;
     if (!el || !tbUnlocked) return;
@@ -108,8 +132,12 @@ export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStrip
     const onHitTop = (entry) => {
       if (!entry.isIntersecting || lockRef.current) return;
       lockRef.current = true;
+
+      // Switch back to A (we're already at top; no programmatic scroll needed).
       setMain('A');
+      // Start the gate so TB re-locks once you scroll down ≥ 100svh
       requestAnimationFrame(() => activateGate());
+
       setTimeout(() => { lockRef.current = false; }, 120);
     };
 
@@ -124,21 +152,25 @@ export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStrip
 
   return (
     <main style={styles.page}>
+      {/* Top sentinel at absolute top (fires at scrollY === 0) */}
       <div ref={topRef} style={styles.sentinel} />
 
+      {/* Top Buffer — always present; shows B strip. Initially locked via JS. */}
       <section ref={topBufferRef} style={{ ...styles.topBuffer, height: tbHeight || '100svh' }}>
         {topStripB}
       </section>
 
+      {/* Main Stage */}
       <section style={styles.mainStage}>
         {main === 'A' ? sectionA : sectionB}
       </section>
 
+      {/* Bottom Buffer — always present; shows A strip */}
       <section style={{ ...styles.bottomBuffer, height: tbHeight || '100svh' }}>
         {bottomStripA}
       </section>
 
-      {/* true bottom sentinel */}
+      {/* 👇 Bottom sentinel at the true end of the page (after Bottom Buffer) */}
       <div ref={bottomRef} style={styles.sentinel} />
     </main>
   );
@@ -150,8 +182,14 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
   },
-  topBuffer: {},
-  bottomBuffer: {},
-  mainStage: {},
-  sentinel: { height: 2 }, // slightly taller helps some mobile browsers
+  topBuffer: {
+    // fixed 100svh region at top; always in DOM
+  },
+  bottomBuffer: {
+    // fixed 100svh region at bottom; always in DOM
+  },
+  mainStage: {
+    // your content defines its own height
+  },
+  sentinel: { height: 1 },
 };
