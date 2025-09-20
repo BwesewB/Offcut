@@ -26,7 +26,7 @@ export default function Home() {
         </section>
       }
       bottomStripA={
-        <div style={{ height: '100%', display: 'grid', placeItems: 'center', backgroundColor: 'lightBlue'}}>
+        <div style={{ height: '100%', display: 'grid', placeItems: 'center', backgroundColor: 'blue'}}>
           <p>Bottom strip (A)</p>
         </div>
       }
@@ -35,6 +35,7 @@ export default function Home() {
           <p>Top strip (B)</p>
         </div>
       }
+      // prompt="scroll up"
     />
 
       {/* <main className="pageLayout">

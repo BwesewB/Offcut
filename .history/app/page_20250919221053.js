@@ -16,25 +16,26 @@ export default function Home() {
     <>
     <ScrollCycle
       sectionA={
-        <section style={{ minHeight: '150svh', display: 'grid', placeItems: 'center', backgroundColor: 'red' }}>
+        <section style={{ minHeight: '150svh', display: 'grid', placeItems: 'center', backgroundColor: 'black' }}>
           <h1>Section A</h1>
         </section>
       }
       sectionB={
-        <section style={{ minHeight: '150svh', display: 'grid', placeItems: 'center', backgroundColor: 'green'}}>
+        <section style={{ minHeight: '150svh', display: 'grid', placeItems: 'center' }}>
           <h1>Section B</h1>
         </section>
       }
       bottomStripA={
-        <div style={{ height: '100%', display: 'grid', placeItems: 'center', backgroundColor: 'lightBlue'}}>
+        <div style={{ height: '100%', display: 'grid', placeItems: 'center' }}>
           <p>Bottom strip (A)</p>
         </div>
       }
       topStripB={
-        <div style={{ height: '100%', display: 'grid', placeItems: 'center', backgroundColor: 'blue'}}>
+        <div style={{ height: '100%', display: 'grid', placeItems: 'center' }}>
           <p>Top strip (B)</p>
         </div>
       }
+      // prompt="scroll up"
     />
 
       {/* <main className="pageLayout">

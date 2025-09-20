@@ -35,6 +35,7 @@ export default function Home() {
           <p>Top strip (B)</p>
         </div>
       }
+      // prompt="scroll up"
     />
 
       {/* <main className="pageLayout">

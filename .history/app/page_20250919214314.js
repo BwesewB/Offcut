@@ -9,32 +9,31 @@ import rock3 from "/public/images/LandscapeRock3-1.webp"
 import MediaBlock from "./components/molecules/mediaBlock/MediaBlock";
 import TwoColumn from "./components/molecules/twoColumn/TwoColumn";
 import GridLayout from "./components/molecules/gridLayout/gridLayout";
-import ScrollCycle from "./components/atoms/scrollcycle/ScrollCycle";
+import ScrollSwap from "./components/atoms/scrollswap/ScrollSwap";
 
 export default function Home() {
   return (
     <>
-    <ScrollCycle
-      sectionA={
-        <section style={{ minHeight: '150svh', display: 'grid', placeItems: 'center', backgroundColor: 'red' }}>
-          <h1>Section A</h1>
-        </section>
-      }
-      sectionB={
-        <section style={{ minHeight: '150svh', display: 'grid', placeItems: 'center', backgroundColor: 'green'}}>
-          <h1>Section B</h1>
-        </section>
-      }
-      bottomStripA={
-        <div style={{ height: '100%', display: 'grid', placeItems: 'center', backgroundColor: 'lightBlue'}}>
-          <p>Bottom strip (A)</p>
-        </div>
-      }
-      topStripB={
-        <div style={{ height: '100%', display: 'grid', placeItems: 'center', backgroundColor: 'blue'}}>
-          <p>Top strip (B)</p>
-        </div>
-      }
+    <ScrollSwap
+      chapters={[
+        {
+          id: 'hero',
+          node: (
+            <section style={{ minHeight: '120svh', display: 'grid', placeItems: 'center' }}>
+              <h1>Hero A</h1>
+            </section>
+          ),
+        },
+        {
+          id: 'next',
+          node: (
+            <section style={{ minHeight: '120svh', display: 'grid', placeItems: 'center' }}>
+              <h1>Section B</h1>
+            </section>
+          ),
+        },
+      ]}
+      // prompt="scroll up" // customize if you like
     />
 
       {/* <main className="pageLayout">
