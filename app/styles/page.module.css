@@ -50,6 +50,10 @@
   justify-content: space-between;
 }
 
+.textSection4 {
+  grid-column: 1 / 2;
+}
+
 .heroContainer {
   height: 100svh;
   width: 100%;
