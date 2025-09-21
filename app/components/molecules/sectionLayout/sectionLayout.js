@@ -10,8 +10,8 @@ export default function SectionLayout({
  }) {
     return (
         <>
-            <div style={{height: `clamp(20svh, 45svw, ${height})`, minHeight: minHeight, display: display, placeItems: placeItems, border: '1px solid red'}} >
-                <div className={styles.section} style={{height: sectionHeight, border: '1px solid blue'}}>
+            <div style={{height: `clamp(20svh, 45svw, ${height})`, minHeight: minHeight, display: display, placeItems: placeItems}} className={styles.sectionWrap}>
+                <div className={styles.section} style={{height: sectionHeight}}>
                     {children}
                 </div>
             </div>

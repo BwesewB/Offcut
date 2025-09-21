@@ -1,4 +1,5 @@
 import "./styles/globals.css";
+import Navbar from "./components/molecules/navbar/navbar";
 
 export const metadata = {
   title: "Offcut",
@@ -10,7 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        {children}
+        <Navbar />
+        <div className='bodyWrap'>
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -18,7 +18,7 @@ body {
   background-color: var(--white);
 }
 
-body {
+.bodyWrap {
   padding-left: var(--sidePadding);
   padding-right: var(--sidePadding);
 }
