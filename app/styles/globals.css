@@ -23,6 +23,10 @@ body {
   padding-right: var(--sidePadding);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 @font-face {
   font-family: 'Sora';
   src: url('/fonts/Sora-Regular.ttf') format('truetype');

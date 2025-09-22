@@ -58,10 +58,12 @@
 
 .heroContainer {
   height: 100svh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   grid-column: 1/6;
   justify-content: center;
   align-items: center;
   border: 1px solid red;
+  overflow: hidden;
+  margin-left: calc(-1 * var(--sidePadding));
 }

@@ -22,7 +22,8 @@ export default function Home() {
       sectionA={
         <section className="pageLayout" style={{ border: '1px solid blue' }}>
           <div className={styles.heroContainer}>
-            <h1 className={styles.title}>OFFCUT</h1>
+            {/* <h1 className={styles.title}>OFFCUT</h1> */}
+            <video src="/videos/ChalkAnimationWAnimeLogo.mp4" autoPlay loop />
           </div>
           <SectionLayout minHeight='60svh'>
             <h2>info</h2>
