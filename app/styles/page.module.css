@@ -51,6 +51,18 @@
   align-items: flex-end;
 }
 
+.textSection1b {
+  column-count: 2;
+  column-gap: var(--gap);
+  column-fill: balance;
+}
+
+.beakDiv {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
 .heroContainer {
   height: 100svh;
   width: 100vw;
