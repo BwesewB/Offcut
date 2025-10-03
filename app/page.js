@@ -43,10 +43,10 @@ export default function Home() {
 
           <SectionLayout >
             <div style={{ gridColumn: '1 / 4' }}>
-              <MediaBlock image={rock1} alt="A stone on a white background" fit="height" />
+              <MediaBlock image={rock1} alt="A stone on a white background" />
             </div>
             <div style={{ gridColumn: '4 / 5' }}>
-              <MediaBlock image={rock1_2} alt="A stone on a white background" fit="height" />
+              <MediaBlock image={rock1_2} alt="A stone on a white background" />
               <p>1</p>
             </div>
           </SectionLayout>
@@ -60,7 +60,7 @@ export default function Home() {
 
           <SectionLayout>
             <div style={{ gridColumn: '1 / 6' }}>
-              <MediaBlock image={rock2} alt="A stone on a white background" fit="height" />
+              <MediaBlock image={rock2} alt="A stone on a white background" />
               <div className={styles.textSection3a}>
                 <h2>beak</h2>
                 <p>Lorem ipsum dolor sit amet consectetur. </p>
@@ -74,7 +74,7 @@ export default function Home() {
                 <p>Lorem ipsum dolor sit amet consectetur. Enim tellus condimentum in id enim vel etiam aliquet donec. Amet eget suspendisse et in massa dolor. Enim sed netus integer donec a potenti orci. Aliquam fames amet morbi porta. Aliquam nulla condimentum eget urna morbi convallis. Quis vehicula fames lectus nisi at pulvinar in semper in. Consectetur interdum bibendum quisque quisque risus sed accumsan tortor habitasse. Suspendisse convallis nulla bibendum egestas venenatis suspendisse sit. Quis mauris arcu posuere mattis enim. Interdum eget auctor fermentum euismod at libero fames. Pretium in feugiat viverra feugiat nulla odio. </p>
               </div>
               <div style={{ gridColumn: '3 / 6', display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                <MediaBlock image={rock2_1} alt="A stone on a white background" fit="height" />
+                <MediaBlock image={rock2_1} alt="A stone on a white background" />
                 <p>1</p>
               </div>
             </SectionLayout>
@@ -82,19 +82,19 @@ export default function Home() {
             <SectionLayout>
               <div style={{ gridColumn: '1 / 2' }}>
                 <p>2</p>
-                <MediaBlock image={rock2vert1} alt="A stone on a white background" fit="height" />
+                <MediaBlock image={rock2vert1} alt="A stone on a white background" />
               </div>
               <div style={{ gridColumn: '2 / 3' }}>
                 <p>3</p>
-                <MediaBlock image={rock2vert4} alt="A stone on a white background" fit="height" />
+                <MediaBlock image={rock2vert4} alt="A stone on a white background" />
               </div>
               <div style={{ gridColumn: '3 / 4' }}>
                 <p>4</p>
-                <MediaBlock image={rock2vert2} alt="A stone on a white background" fit="height" />
+                <MediaBlock image={rock2vert2} alt="A stone on a white background" />
               </div>
               <div style={{ gridColumn: '4 / 5' }}>
                 <p>5</p>
-                <MediaBlock image={rock2vert3} alt="A stone on a white background" fit="height" />
+                <MediaBlock image={rock2vert3} alt="A stone on a white background" />
               </div>
             </SectionLayout>
           </div>
@@ -108,7 +108,7 @@ export default function Home() {
           
           <SectionLayout>
             <div style={{ gridColumn: '1 / 4' }}>
-              <MediaBlock image={rock3} alt="Rock 3. Fishbone" fit="height" />
+              <MediaBlock image={rock3} alt="Rock 3. Fishbone" />
               <h2>bone</h2>
             </div>
             <div style={{ gridColumn: '5 / 6' }}>
@@ -122,11 +122,11 @@ export default function Home() {
             </div>
             <div style={{ gridColumn: '3 / 5' }}>
               <p>1</p>
-              <MediaBlock image={rock3_2} alt="Rock 3. Fishbone" fit="height" />
+              <MediaBlock image={rock3_2} alt="Rock 3. Fishbone" />
             </div>
             <div style={{ gridColumn: '5 / 6' }}>
               <p>2</p>
-              <MediaBlock image={rock3_3} alt="Rock 3. Fishbone" fit="height" />
+              <MediaBlock image={rock3_3} alt="Rock 3. Fishbone" />
             </div>
           </SectionLayout>
         </section>
@@ -135,16 +135,16 @@ export default function Home() {
         <section className="pageLayout" style={{ border: '1px solid red' }}>
           <SectionLayout>
             <div style={{ gridColumn: '1 / 2' }}>
-              <MediaBlock image={chalk2_1} alt="A stone on a white background" fit="height" />
+              <MediaBlock image={chalk2_1} alt="A stone on a white background" />
             </div>
             <div style={{ gridColumn: '2 / 3' }}>
-              <MediaBlock image={chalk2_2} alt="A stone on a white background" fit="height" />
+              <MediaBlock image={chalk2_2} alt="A stone on a white background" />
             </div>
             <div style={{ gridColumn: '3 / 4' }}>
               <p>Lorem ipsum dolor sit amet consectetur. Pellentesque in sed sem in lectus vitae. Ipsum integer tincidunt venenatis quis. Enim ac urna nisl ullamcorper purus sollicitudin phasellus. Dictum consequat neque dui dolor consequat consequat integer eget amet. Consequat eget porttitor id at etiam vulputate in vivamus. Mauris aliquam lorem lectus arcu vitae sodales sollicitudin posuere cursus. Vestibulum volutpat commodo amet dolor.</p>
             </div>
             <div style={{ gridColumn: '5 / 6' }}>
-              <MediaBlock image={chalk2_3} alt="A stone on a white background" fit="height" />
+              <MediaBlock image={chalk2_3} alt="A stone on a white background" />
             </div>
           </SectionLayout>
 
@@ -153,7 +153,7 @@ export default function Home() {
               <p className="plarge">Lorem ipsum dolor sit amet consectetur. </p>
             </div>
             <div style={{ gridColumn: '2 / 6' }}>
-              <MediaBlock image={chalkLandscape2} alt="A stone on a white background" fit="height" />
+              <MediaBlock image={chalkLandscape2} alt="A stone on a white background" />
             </div>
             <div style={{ gridColumn: '2 / 3', marginTop: 'var(--gap)' }}>
               <p>Lorem ipsum dolor sit amet consectetur. Pellentesque in sed sem in lectus vitae. Ipsum integer tincidunt venenatis quis. Enim ac urna nisl ullamcorper purus sollicitudin phasellus. Dictum consequat neque dui dolor consequat consequat integer eget amet. Consequat eget porttitor id at etiam vulputate in vivamus. Mauris aliquam lorem lectus arcu vitae sodales sollicitudin posuere cursus. Vestibulum volutpat commodo amet dolor.</p>
@@ -165,13 +165,13 @@ export default function Home() {
               <p className="plarge">Lorem ipsum dolor sit amet consectetur. Iaculis potenti lobortis ornare vel. In sed libero arcu senectus et.</p>
             </div>
             <div style={{ gridColumn: '4 / 5' }}>
-              <MediaBlock image={chalk1} alt="A stone on a white background" fit="height" />
+              <MediaBlock image={chalk1} alt="A stone on a white background" width='80%' />
             </div>
           </SectionLayout>
 
           <SectionLayout>
             <div style={{ gridColumn: '1 / 4' }}>
-              <MediaBlock image={chalkLandscape1} alt="A stone on a white background" fit="height" />
+              <MediaBlock image={chalkLandscape1} alt="A stone on a white background" />
             </div>
           </SectionLayout>
 

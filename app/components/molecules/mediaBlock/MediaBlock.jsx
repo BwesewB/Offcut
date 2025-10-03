@@ -3,16 +3,29 @@
 import Image from 'next/image';
 import styles from './MediaBlock.module.css';
 
-const MediaBlock = ({ image, alt = 'Media Image', fit, style = {} }) => {
+const MediaBlock = ({ 
+  image, 
+  alt = 'Media Image', 
+  fit = 'height', 
+  width,
+  style = {} 
+}) => {
+
+  let wrapperStyle;
+
+  if (width) {
+    // Explicit width prop overrides everything
+    wrapperStyle = { width, height: 'auto' };
+  } else if (fit === 'height') {
+    wrapperStyle = { width: '100%', height: 'auto' };
+  } else {
+    wrapperStyle = { width: 'auto', height: '100%' };
+  }
+
   return (
     <div 
       className={styles.mediaWrapper}
-      style={{
-        ...(fit === 'height'
-          ? { width: '100%', height: 'auto' }
-          : { width: 'auto', height: '100%' }),
-        ...style,
-      }}
+      style={{ ...wrapperStyle, ...style }}
     >
       <Image
         src={image}
