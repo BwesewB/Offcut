@@ -10,11 +10,11 @@
   font-size: 100px;
 }
 
-.textSection1 {
+.textSection1a {
   grid-column: 2/6;
 }
 
-.textSection1 .indentFirstLine {
+.textSection1a .indentFirstLine {
   /* ensure a known line-height; set your own value */
   line-height: 1.1;
   --lh: 1.1;
@@ -25,7 +25,7 @@
 }
 
 /* the trick: a 1-line tall float that pushes ONLY the first line right */
-.textSection1 .indentFirstLine::before {
+.textSection1a .indentFirstLine::before {
   content: "";
   float: left;
   width: var(--indent);
@@ -34,23 +34,18 @@
   height: calc(1em * var(--lh));
 }
 
-/* tidy */
-.textSection1 p {
-  margin: 0;
-}
-
-.textSection2 {
+.textSectionWTitle {
   display: flex;
   flex-direction: column;
 }
 
-.textSection3 {
+.textSection3a {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.textSection4 {
+.textSectionxa {
   height: 100%;
   display: flex;
   align-items: flex-end;

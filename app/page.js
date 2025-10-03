@@ -1,4 +1,9 @@
 import styles from "./styles/page.module.css";
+
+import MediaBlock from "./components/molecules/mediaBlock/MediaBlock";
+import ScrollCycle from "./components/atoms/scrollcycle/ScrollCycle";
+import SectionLayout from "./components/molecules/sectionLayout/sectionLayout";
+
 import rock1 from "/public/images/LandscapeRock1.png"
 import rock1_2 from "/public/images/LandscapeRock1-2.jpg"
 import rock2 from "/public/images/LandscapeRock2-2.webp"
@@ -10,10 +15,14 @@ import rock2vert4 from "/public/images/Rock3-4.png"
 import rock3 from "/public/images/LandscapeRock3.webp"
 import rock3_2 from "/public/images/Rock4-2.png"
 import rock3_3 from "/public/images/Rock4-3.jpg"
-import chalkRock1 from "/public/images/ChalkRock1.png"
-import MediaBlock from "./components/molecules/mediaBlock/MediaBlock";
-import ScrollCycle from "./components/atoms/scrollcycle/ScrollCycle";
-import SectionLayout from "./components/molecules/sectionLayout/sectionLayout";
+
+import chalk1 from "/public/images/Chalk1.png"
+import chalk2_1 from "/public/images/Chalk2_1.png"
+import chalk2_2 from "/public/images/chalk2_2.png"
+import chalk2_3 from "/public/images/chalk2_3.png"
+import chalkLandscape1 from "/public/images/ChalkLandscape1.png"
+import chalkLandscape2 from "/public/images/ChalkLandscape2.png"
+
 
 export default function Home() {
   return (
@@ -27,7 +36,7 @@ export default function Home() {
           </div>
           <SectionLayout minHeight='60svh'>
             <h2>info</h2>
-            <div className={styles.textSection1}>
+            <div className={styles.textSection1a}>
               <p className={`${"plarge"} ${styles.indentFirstLine}`}>Offcut is a personal study of material left in its natural state, shaped but not polished. A further exploration can reveal that value isn't always in what is resolved, but in what resists being made familiar.</p>
             </div>
           </SectionLayout>
@@ -43,7 +52,7 @@ export default function Home() {
           </SectionLayout>
 
           <SectionLayout>
-            <div className={styles.textSection2}  style={{ gridColumn: '4 / 5' }}>
+            <div className={styles.textSectionWTitle}  style={{ gridColumn: '2 / 3' }}>
               <h2>tora</h2>
               <p>Lorem ipsum dolor sit amet consectetur. Pellentesque in sed sem in lectus vitae. Ipsum integer tincidunt venenatis quis. Enim ac urna nisl ullamcorper purus sollicitudin phasellus. Dictum consequat neque dui dolor consequat consequat integer eget amet. Consequat eget porttitor id at etiam vulputate in vivamus. Mauris aliquam lorem lectus arcu vitae sodales sollicitudin posuere cursus. Vestibulum volutpat commodo amet dolor. </p>
             </div>
@@ -51,7 +60,7 @@ export default function Home() {
           <SectionLayout>
             <div style={{ gridColumn: '1 / 6' }}>
               <MediaBlock image={rock2} alt="A stone on a white background" fit="height" />
-              <div className={styles.textSection3}>
+              <div className={styles.textSection3a}>
                 <h2>beak</h2>
                 <p>Lorem ipsum dolor sit amet consectetur. </p>
               </div>
@@ -104,7 +113,7 @@ export default function Home() {
           </SectionLayout>
 
           <SectionLayout>
-            <div className={styles.textSection4}>
+            <div className={styles.textSectionxa}>
               <p>Lorem ipsum dolor sit amet consectetur. Iaculis potenti lobortis ornare vel. In sed libero arcu senectus et niwsl.</p>
             </div>
             <div style={{ gridColumn: '3 / 5' }}>
@@ -120,19 +129,29 @@ export default function Home() {
       }
       sectionB={
         <section className="pageLayout" style={{ border: '1px solid red' }}>
-          <h1>Section B</h1>
           <SectionLayout>
-            <div style={{ gridColumn: '1 / 6' }}>
-                <MediaBlock image={chalkRock1} alt="A stone on a white background" fit="height" />
+            <div style={{ gridColumn: '1 / 2' }}>
+                <MediaBlock image={chalk2_1} alt="A stone on a white background" fit="height" />
+            </div>
+            <div style={{ gridColumn: '2 / 3' }}>
+                <MediaBlock image={chalk2_2} alt="A stone on a white background" fit="height" />
+            </div>
+            <div style={{ gridColumn: '3 / 4' }}>
+              <p>Lorem ipsum dolor sit amet consectetur. Pellentesque in sed sem in lectus vitae. Ipsum integer tincidunt venenatis quis. Enim ac urna nisl ullamcorper purus sollicitudin phasellus. Dictum consequat neque dui dolor consequat consequat integer eget amet. Consequat eget porttitor id at etiam vulputate in vivamus. Mauris aliquam lorem lectus arcu vitae sodales sollicitudin posuere cursus. Vestibulum volutpat commodo amet dolor.</p>
+            </div>
+            <div style={{ gridColumn: '5 / 6' }}>
+                <MediaBlock image={chalk2_3} alt="A stone on a white background" fit="height" />
             </div>
           </SectionLayout>
 
         </section>
       }
       bottomStripA={
-        <div style={{ height: '100%', display: 'grid', placeItems: 'center', border: '1px solid green' }}>
-          <p>Bottom strip (A)</p>
-        </div>
+        <SectionLayout minHeight="100vh" placeItems="end">
+          <div style={{ gridColumn: '1 / 5' }}>
+              <p className="plarge">Reaching the end just means you’re close to something worth returning to.</p>
+          </div>
+        </SectionLayout>
       }
       topStripB={
         <div style={{ height: '100%', display: 'grid', placeItems: 'center' }}>
