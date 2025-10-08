@@ -18,7 +18,7 @@ const MediaBlock = ({
     wrapperStyle = { width, height: 'auto' };
   } else if (fit === 'height') {
     wrapperStyle = { width: '100%', height: 'auto' };
-  } else {
+  } else if (fit === 'width') {
     wrapperStyle = { width: 'auto', height: '100%' };
   }
 

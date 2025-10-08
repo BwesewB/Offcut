@@ -1,0 +1,14 @@
+.animatedTextContainer {
+  overflow: hidden;
+}
+
+.animatedText {
+  display: block;
+  will-change: transform;
+}
+
+/* Each line's clipping mask */
+.lineMask {
+  overflow: hidden;
+  display: block;
+}

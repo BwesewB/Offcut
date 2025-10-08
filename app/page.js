@@ -3,6 +3,7 @@ import styles from "./styles/page.module.css";
 import MediaBlock from "./components/molecules/mediaBlock/MediaBlock";
 import ScrollCycle from "./components/atoms/scrollcycle/ScrollCycle";
 import SectionLayout from "./components/molecules/sectionLayout/sectionLayout";
+import AnimatedText from "./components/atoms/animatedText/animatedText";
 
 import rock1 from "/public/images/LandscapeRock1.png"
 import rock1_2 from "/public/images/LandscapeRock1-2.jpg"
@@ -37,7 +38,10 @@ export default function Home() {
           <SectionLayout minHeight='30svh'>
             <h2>info</h2>
             <div className={styles.textSection1a}>
-              <p className={`${"plarge"} ${styles.indentFirstLine}`}>Offcut is a personal study of material left in its natural state, shaped but not polished. A further exploration can reveal that value isn't always in what is resolved, but in what resists being made familiar.</p>
+              <AnimatedText 
+                text="Offcut is a personal study of material left in its natural state, shaped but not polished. A further exploration can reveal that value isn't always in what is resolved, but in what resists being made familiar."
+                className={`${"plarge"} ${styles.indentFirstLine}`}
+              />
             </div>
           </SectionLayout>
 
@@ -102,7 +106,10 @@ export default function Home() {
 
           <SectionLayout>
             <div style={{ gridColumn: '1 / 4' }}>
-              <p className="plarge">Lorem ipsum dolor sit amet consectetur. Iaculis potenti lobortis ornare vel. In sed libero arcu senectus et niwsl.</p>
+              <AnimatedText 
+                text="Lorem ipsum dolor sit amet consectetur. Iaculis potenti lobortis ornare vel. In sed libero arcu senectus et niwsl."
+                className="plarge"
+              />
             </div>
           </SectionLayout>
           
@@ -150,7 +157,11 @@ export default function Home() {
 
           <SectionLayout>
             <div style={{ gridColumn: '4 / 6', marginBottom: 'var(--gap)' }}>
-              <p className="plarge">Lorem ipsum dolor sit amet consectetur. </p>
+              <AnimatedText 
+                text="Lorem ipsum dolor sit amet consectetur."
+                className="plarge"
+                reverse={true}
+              />
             </div>
             <div style={{ gridColumn: '2 / 6' }}>
               <MediaBlock image={chalkLandscape2} alt="A stone on a white background" />
@@ -162,7 +173,11 @@ export default function Home() {
 
           <SectionLayout>
             <div style={{ gridColumn: '1 / 3' }}>
-              <p className="plarge">Lorem ipsum dolor sit amet consectetur. Iaculis potenti lobortis ornare vel. In sed libero arcu senectus et.</p>
+              <AnimatedText 
+                text="Lorem ipsum dolor sit amet consectetur. Iaculis potenti lobortis ornare vel. In sed libero arcu senectus et."
+                className="plarge"
+                reverse={true}
+              />
             </div>
             <div style={{ gridColumn: '4 / 5' }}>
               <MediaBlock image={chalk1} alt="A stone on a white background" width='80%' />
