@@ -225,7 +225,7 @@ export default function Home() {
         </section>
       }
       bottomStripA={
-        <SectionLayout minHeight="100svh" height="100dvh" placeItems="end">
+        <SectionLayout minHeight="100svh" height="100svh" placeItems="end">
           <div style={{ gridColumn: '1 / 5' }}>
               <p className="plarge">Reaching the end just means you’re close to something worth returning to.</p>
           </div>
