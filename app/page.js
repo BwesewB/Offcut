@@ -7,13 +7,13 @@ import AnimatedText from "./components/atoms/animatedText/animatedText";
 
 import rock1 from "/public/images/LandscapeRock1.png"
 import rock1_2 from "/public/images/LandscapeRock1-2.jpg"
-import rock2 from "/public/images/LandscapeRock2-2.webp"
-import rock2_1 from "/public/images/LandscapeRock2.webp"
+import rock2 from "/public/images/LandscapeRock2-2.jpg"
+import rock2_1 from "/public/images/LandscapeRock2.jpg"
 import rock2vert1 from "/public/images/Rock3-1.png"
 import rock2vert2 from "/public/images/Rock3-2.png"
 import rock2vert3 from "/public/images/Rock3-3.png"
 import rock2vert4 from "/public/images/Rock3-4.png"
-import rock3 from "/public/images/LandscapeRock3.webp"
+import rock3 from "/public/images/LandscapeRock3.jpg"
 import rock3_2 from "/public/images/Rock4-2.png"
 import rock3_3 from "/public/images/Rock4-3.jpg"
 
