@@ -61,7 +61,7 @@ export default function AnimatedText({
       end: reverse ? 'top top' : 'bottom 20%',
       onEnter: reverse ? null : () => tl.play(),
       onEnterBack: reverse ? () => tl.play() : null,
-      markers: true,
+      markers: false,
       id: `animatedText-${Math.random().toString(36).substring(2, 7)}`,
     });
     

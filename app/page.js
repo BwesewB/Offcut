@@ -109,7 +109,6 @@ export default function Home() {
             </SectionLayout>
           </div>
 
-
           <SectionLayout>
             <div style={{ gridColumn: '1 / 4' }}>
               <AnimatedText 
@@ -150,6 +149,9 @@ export default function Home() {
           </SectionLayout>
         </section>
       }
+
+      //section b
+
       sectionB={
         <section className="pageLayout" style={{ border: '1px solid red' }}>
           <SectionLayout>
@@ -160,7 +162,10 @@ export default function Home() {
               <MediaBlock image={chalk2_2} alt="A stone on a white background" />
             </div>
             <div style={{ gridColumn: '3 / 4' }}>
-              <p>Lorem ipsum dolor sit amet consectetur. Pellentesque in sed sem in lectus vitae. Ipsum integer tincidunt venenatis quis. Enim ac urna nisl ullamcorper purus sollicitudin phasellus. Dictum consequat neque dui dolor consequat consequat integer eget amet. Consequat eget porttitor id at etiam vulputate in vivamus. Mauris aliquam lorem lectus arcu vitae sodales sollicitudin posuere cursus. Vestibulum volutpat commodo amet dolor.</p>
+              <AnimatedText 
+                text="Lorem ipsum dolor sit amet consectetur. Enim tellus condimentum in id enim vel etiam aliquet donec. Amet eget suspendisse et in massa dolor. Enim sed netus integer donec a potenti orci. Aliquam fames amet morbi porta. Aliquam nulla condimentum eget urna morbi convallis. Quis vehicula fames lectus nisi at pulvinar in semper in. Consectetur interdum bibendum quisque quisque risus sed accumsan tortor habitasse. Suspendisse convallis nulla bibendum egestas venenatis suspendisse sit. Quis mauris arcu posuere mattis enim. Interdum eget auctor fermentum euismod at libero fames. Pretium in feugiat viverra feugiat nulla odio."
+                reverse={true}
+              />
             </div>
             <div style={{ gridColumn: '5 / 6' }}>
               <MediaBlock image={chalk2_3} alt="A stone on a white background" />
@@ -173,13 +178,17 @@ export default function Home() {
                 text="Lorem ipsum dolor sit amet consectetur."
                 className="plarge"
                 reverse={true}
+                tilt={true}
               />
             </div>
             <div style={{ gridColumn: '2 / 6' }}>
               <MediaBlock image={chalkLandscape2} alt="A stone on a white background" />
             </div>
             <div style={{ gridColumn: '2 / 3', marginTop: 'var(--gap)' }}>
-              <p>Lorem ipsum dolor sit amet consectetur. Pellentesque in sed sem in lectus vitae. Ipsum integer tincidunt venenatis quis. Enim ac urna nisl ullamcorper purus sollicitudin phasellus. Dictum consequat neque dui dolor consequat consequat integer eget amet. Consequat eget porttitor id at etiam vulputate in vivamus. Mauris aliquam lorem lectus arcu vitae sodales sollicitudin posuere cursus. Vestibulum volutpat commodo amet dolor.</p>
+              <AnimatedText 
+                text="Lorem ipsum dolor sit amet consectetur. Enim tellus condimentum in id enim vel etiam aliquet donec. Amet eget suspendisse et in massa dolor. Enim sed netus integer donec a potenti orci. Aliquam fames amet morbi porta. Aliquam nulla condimentum eget urna morbi convallis. Quis vehicula fames lectus nisi at pulvinar in semper in. Consectetur interdum bibendum quisque quisque risus sed accumsan tortor habitasse. Suspendisse convallis nulla bibendum egestas venenatis suspendisse sit. Quis mauris arcu posuere mattis enim. Interdum eget auctor fermentum euismod at libero fames. Pretium in feugiat viverra feugiat nulla odio."
+                reverse={true}
+              />            
             </div>
           </SectionLayout>
 
@@ -189,6 +198,7 @@ export default function Home() {
                 text="Lorem ipsum dolor sit amet consectetur. Iaculis potenti lobortis ornare vel. In sed libero arcu senectus et."
                 className="plarge"
                 reverse={true}
+                tilt={true}
               />
             </div>
             <div style={{ gridColumn: '4 / 5' }}>
@@ -204,7 +214,11 @@ export default function Home() {
 
           <SectionLayout>
             <div style={{ gridColumn: '3 / 5' }}>
-              <p className={styles.textSection1b}>Lorem ipsum dolor sit amet consectetur. Enim tellus condimentum in id enim vel etiam aliquet donec. Amet eget suspendisse et in massa dolor. Enim sed netus integer donec a potenti orci. Aliquam fames amet morbi porta. Aliquam nulla condimentum eget urna morbi convallis. Quis vehicula fames lectus nisi at pulvinar in semper in. Consectetur interdum bibendum quisque quisque risus sed accumsan tortor habitasse. Suspendisse convallis nulla bibendum egestas venenatis suspendisse sit. Quis mauris arcu posuere mattis enim. Interdum eget auctor fermentum euismod at libero fames. Pretium in feugiat viverra feugiat nulla odio. Blandit nisl diam purus orci mauris penatibus molestie diam amet. Ipsum eget donec tellus nibh nunc dapibus neque. Leo dolor mi habitasse nibh mattis quis. Viverra fermentum mattis morbi orci ac aliquet magna id. Nec aenean id elementum urna dictumst vitae dui. Viverra amet mi mattis orci amet non velit. Etiam magna erat odio ultrices fames. Sed varius tincidunt duis ac consequat scelerisque tellus nec. Senectus pretium porttitor euismod diam etiam tristique viverra ornare a. Dignissim eu consectetur tristique tellus tempus dictum sed venenatis. Quis etiam non amet eget lacus faucibus in elit vitae. Vitae proin sagittis eu curabitur sed ornare. Pellentesque ullamcorper fusce ullamcorper pharetra fusce amet.</p>
+              <AnimatedText 
+                text="Lorem ipsum dolor sit amet consectetur. Enim tellus condimentum in id enim vel etiam aliquet donec. Amet eget suspendisse et in massa dolor. Enim sed netus integer donec a potenti orci. Aliquam fames amet morbi porta. Aliquam nulla condimentum eget urna morbi convallis. Quis vehicula fames lectus nisi at pulvinar in semper in. Consectetur interdum bibendum quisque quisque risus sed accumsan tortor habitasse. Suspendisse convallis nulla bibendum egestas venenatis suspendisse sit. Quis mauris arcu posuere mattis enim. Interdum eget auctor fermentum euismod at libero fames. Pretium in feugiat viverra feugiat nulla odio. Blandit nisl diam purus orci mauris penatibus molestie diam amet. Ipsum eget donec tellus nibh nunc dapibus neque. Leo dolor mi habitasse nibh mattis quis. Viverra fermentum mattis morbi orci ac aliquet magna id. Nec aenean id elementum urna dictumst vitae dui. Viverra amet mi mattis orci amet non velit. Etiam magna erat odio ultrices fames. Sed varius tincidunt duis ac consequat scelerisque tellus nec. Senectus pretium porttitor euismod diam etiam tristique viverra ornare a. Dignissim eu consectetur tristique tellus tempus dictum sed venenatis. Quis etiam non amet eget lacus faucibus in elit vitae. Vitae proin sagittis eu curabitur sed ornare. Pellentesque ullamcorper fusce ullamcorper pharetra fusce amet."
+                className={styles.textSection1b}
+                reverse={true}
+              />
             </div>
           </SectionLayout>
         </section>
