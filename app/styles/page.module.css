@@ -64,8 +64,8 @@
 }
 
 .heroContainer {
-  height: 100px;
-  /* min-height: 100svh; */
+  height: 100dvh;
+  min-height: 100svh;
   width: 100vw;
   display: flex;
   grid-column: 1/6;
