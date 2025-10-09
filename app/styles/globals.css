@@ -6,7 +6,7 @@
   --font-secondary: 'Rethink Sans', sans-serif;
   --sidePadding: 24px;
   --gap: 12px;
-  --layoutSpacing: clamp(10svw, 20svw, 25svw);
+  --layoutSpacing: clamp(10vw, 20vw, 25vw);
   --containerHeight: clamp(30vw, 40vw, 50vw);
 }
 
