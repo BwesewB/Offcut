@@ -19,8 +19,8 @@ import rock3_3 from "/public/images/Rock4-3.jpg"
 
 import chalk1 from "/public/images/Chalk1.png"
 import chalk2_1 from "/public/images/Chalk2_1.png"
-import chalk2_2 from "/public/images/chalk2_2.png"
-import chalk2_3 from "/public/images/chalk2_3.png"
+import chalk2_2 from "/public/images/Chalk2_2.png"
+import chalk2_3 from "/public/images/Chalk2_3.png"
 import chalkLandscape1 from "/public/images/ChalkLandscape1.png"
 import chalkLandscape2 from "/public/images/ChalkLandscape2.png"
 
