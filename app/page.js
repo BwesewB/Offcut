@@ -34,8 +34,9 @@ export default function Home() {
           <div className={styles.heroContainer}>
             {/* <h1 className={styles.title}>OFFCUT</h1> */}
             <video src="/videos/ChalkAnimationWAnimeLogo.mp4" autoPlay loop />
+            {/* <MediaBlock image={rock1} alt="A stone on a white background" /> */}
           </div>
-          <SectionLayout minHeight='30svh'>
+          <SectionLayout minHeight='30lvh'>
             <h2>info</h2>
             <div className={styles.textSection1a}>
               <AnimatedText 
@@ -225,7 +226,7 @@ export default function Home() {
         </section>
       }
       bottomStripA={
-        <SectionLayout minHeight="100svh" height="100svh" placeItems="end">
+        <SectionLayout minHeight="100lvh" placeItems="end">
           <div style={{ gridColumn: '1 / 5' }}>
               <p className="plarge">Reaching the end just means you’re close to something worth returning to.</p>
           </div>

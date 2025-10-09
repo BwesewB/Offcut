@@ -64,14 +64,14 @@
 }
 
 .heroContainer {
-  height: 100dvh;
-  min-height: 100svh;
+  height: 100lvh;
+  min-height: 100lvh;
   width: 100vw;
   display: flex;
   grid-column: 1/6;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   overflow: hidden;
   margin-left: calc(-1 * var(--sidePadding));
 }

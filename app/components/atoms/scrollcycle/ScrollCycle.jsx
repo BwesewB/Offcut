@@ -126,7 +126,7 @@ export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStrip
     <main style={styles.page}>
       <div ref={topRef} style={styles.sentinel} />
 
-      <section ref={topBufferRef} style={{ ...styles.topBuffer, height: tbHeight || '100svh' }}>
+      <section ref={topBufferRef} style={{ ...styles.topBuffer, height: tbHeight || '100dvh' }}>
         {topStripB}
       </section>
 
@@ -134,7 +134,7 @@ export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStrip
         {main === 'A' ? sectionA : sectionB}
       </section>
 
-      <section style={{ ...styles.bottomBuffer, height: tbHeight || '100svh' }}>
+      <section style={{ ...styles.bottomBuffer, height: tbHeight || '100dvh' }}>
         {bottomStripA}
       </section>
 
@@ -146,7 +146,7 @@ export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStrip
 
 const styles = {
   page: {
-    minHeight: '100svh',
+    minHeight: '100dvh',
     display: 'flex',
     flexDirection: 'column',
   },

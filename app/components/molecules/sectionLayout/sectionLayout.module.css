@@ -3,7 +3,6 @@
   grid-template-columns: repeat(5, 1fr);
   column-gap: var(--gap);
   width: 100%;
-  /* row-gap: 20svh; */
   /* border: 1px solid red; */
 }
 
