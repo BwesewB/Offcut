@@ -13,6 +13,8 @@ export default function AnimatedText({
   className = '',
   delay = 0,
   reverse = false,
+  tilt = false,
+  trigger = '85%',
 }) {
   const el = useRef(null);
   const splitRef = useRef(null);
@@ -38,12 +40,11 @@ export default function AnimatedText({
       splitRef.current.lines,
       {
         y: '100%',
-        rotateZ: 5,
-        transformOrigin: 'left bottom',
+        ...(tilt && { rotateZ: 5, transformOrigin: 'left bottom' }),
       },
       {
         y: '0%',
-        rotateZ: 0,
+        ...(tilt && { rotateZ: 0 }),
         ease: 'power4.out',
         duration: 1,
         delay,
@@ -56,11 +57,11 @@ export default function AnimatedText({
 
     triggerRef.current = ScrollTrigger.create({
       trigger: el.current,
-      start: reverse ? 'bottom 80%' : 'top 80%',
+      start: reverse ? 'bottom 80%' : `top ${trigger}`,
       end: reverse ? 'top top' : 'bottom 20%',
       onEnter: reverse ? null : () => tl.play(),
       onEnterBack: reverse ? () => tl.play() : null,
-      markers: false,
+      markers: true,
       id: `animatedText-${Math.random().toString(36).substring(2, 7)}`,
     });
     
