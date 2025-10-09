@@ -30,7 +30,7 @@ export default function Home() {
     <>
     <ScrollCycle
       sectionA={
-        <section className="pageLayout" style={{ border: '1px solid blue' }}>
+        <section className="pageLayout">
           <div className={styles.heroContainer}>
             {/* <h1 className={styles.title}>OFFCUT</h1> */}
             <video src="/videos/ChalkAnimationWAnimeLogo.mp4" autoPlay loop />
@@ -92,19 +92,19 @@ export default function Home() {
             <SectionLayout>
               <div style={{ gridColumn: '1 / 2' }}>
                 <p>2</p>
-                <MediaBlock image={rock2vert1} alt="A stone on a white background" />
+                <MediaBlock image={rock2vert1} alt="A stone on a white background" width='60%'/>
               </div>
               <div style={{ gridColumn: '2 / 3' }}>
                 <p>3</p>
-                <MediaBlock image={rock2vert4} alt="A stone on a white background" />
+                <MediaBlock image={rock2vert4} alt="A stone on a white background" width='60%'/>
               </div>
               <div style={{ gridColumn: '3 / 4' }}>
                 <p>4</p>
-                <MediaBlock image={rock2vert2} alt="A stone on a white background" />
+                <MediaBlock image={rock2vert2} alt="A stone on a white background" width='60%'/>
               </div>
               <div style={{ gridColumn: '4 / 5' }}>
                 <p>5</p>
-                <MediaBlock image={rock2vert3} alt="A stone on a white background" />
+                <MediaBlock image={rock2vert3} alt="A stone on a white background" width='60%'/>
               </div>
             </SectionLayout>
           </div>
@@ -123,13 +123,13 @@ export default function Home() {
           <SectionLayout>
             <div style={{ gridColumn: '1 / 4' }}>
               <MediaBlock image={rock3} alt="Rock 3. Fishbone" />
-              <h2>bone</h2>
             </div>
-            <div style={{ gridColumn: '5 / 6' }}>
+            <div style={{ gridColumn: '5 / 6', alignSelf: 'flex-end' }}>
               <AnimatedText 
                 text="Lorem ipsum dolor sit amet consectetur. Enim tellus condimentum in id enim vel etiam aliquet donec. Amet eget suspendisse et in massa dolor. Enim sed netus integer donec a potenti orci. Aliquam fames amet morbi porta. Aliquam nulla condimentum eget urna morbi convallis. Quis vehicula fames lectus nisi at pulvinar in semper in. Consectetur interdum bibendum quisque quisque risus sed accumsan tortor habitasse. Suspendisse convallis nulla bibendum egestas venenatis suspendisse sit. Quis mauris arcu posuere mattis enim. Interdum eget auctor fermentum euismod at libero fames. Pretium in feugiat viverra feugiat nulla odio."
               />
             </div>
+            <h2 style={{ gridColumn: '1 / 4' }}>bone</h2>
           </SectionLayout>
 
           <SectionLayout>
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
             <div style={{ gridColumn: '3 / 5' }}>
               <p>1</p>
-              <MediaBlock image={rock3_2} alt="Rock 3. Fishbone" />
+              <MediaBlock image={rock3_2} alt="Rock 3. Fishbone" width='80%'/>
             </div>
             <div style={{ gridColumn: '5 / 6' }}>
               <p>2</p>
@@ -153,7 +153,8 @@ export default function Home() {
       //section b
 
       sectionB={
-        <section className="pageLayout" style={{ border: '1px solid red' }}>
+        <section className="pageLayout"> 
+         {/* style={{ border: '1px solid red' }} */}
           <SectionLayout>
             <div style={{ gridColumn: '1 / 2' }}>
               <MediaBlock image={chalk2_1} alt="A stone on a white background" />
