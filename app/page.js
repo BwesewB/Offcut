@@ -4,6 +4,7 @@ import MediaBlock from "./components/molecules/mediaBlock/MediaBlock";
 import ScrollCycle from "./components/atoms/scrollcycle/ScrollCycle";
 import SectionLayout from "./components/molecules/sectionLayout/sectionLayout";
 import AnimatedText from "./components/atoms/animatedText/animatedText";
+import AnimatedLetters from "./components/atoms/AnimatedLetters/AnimatedLetters";
 
 import rock1 from "/public/images/LandscapeRock1.png"
 import rock1_2 from "/public/images/LandscapeRock1-2.jpg"
@@ -38,7 +39,7 @@ export default function Home() {
                 {/* <h2>computer generated stone shapes</h2> */}
               </div>
               <div className={styles.heroContainerTextBottom}>
-                <h1 className={styles.title}>OFFCUT</h1>
+                <AnimatedLetters text="OFFCUT" className={styles.title}/>
                 <h2>info</h2>
               </div>
             </div>
@@ -117,19 +118,19 @@ export default function Home() {
             <SectionLayout paddingBottom="0">
               <div style={{ gridColumn: '1 / 2' }}>
                 <p>2</p>
-                <MediaBlock image={rock2vert1} alt="A stone on a white background" width='60%'/>
+                <MediaBlock image={rock2vert1} alt="A stone on a white background" width='90%'/>
               </div>
               <div style={{ gridColumn: '2 / 3' }}>
                 <p>3</p>
-                <MediaBlock image={rock2vert4} alt="A stone on a white background" width='60%'/>
+                <MediaBlock image={rock2vert4} alt="A stone on a white background" width='90%'/>
               </div>
               <div style={{ gridColumn: '3 / 4' }}>
                 <p>4</p>
-                <MediaBlock image={rock2vert2} alt="A stone on a white background" width='60%'/>
+                <MediaBlock image={rock2vert2} alt="A stone on a white background" width='90%'/>
               </div>
               <div style={{ gridColumn: '4 / 5' }}>
                 <p>5</p>
-                <MediaBlock image={rock2vert3} alt="A stone on a white background" width='60%'/>
+                <MediaBlock image={rock2vert3} alt="A stone on a white background" width='90%'/>
               </div>
             </SectionLayout>
           </div>
