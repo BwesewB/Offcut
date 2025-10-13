@@ -96,22 +96,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  height: fit-content;
   /* border: 1px solid red; */
 }
 
-.title {
-  font-size: 10rem;
-}
-
-.secondSection {
-  /* min-height: 100lvh;
-  margin-left: calc(-1 * var(--sidePadding));
-  margin-right: calc(-1 * var(--sidePadding));
-  padding-left: var(--sidePadding);
-  padding-right: var(--sidePadding);
-  background-image: url("/images/TextureRock.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center; */
+.heroArrow {
+  padding-bottom: 1rem;
 }

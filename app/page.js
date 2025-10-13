@@ -5,6 +5,7 @@ import ScrollCycle from "./components/atoms/scrollcycle/ScrollCycle";
 import SectionLayout from "./components/molecules/sectionLayout/sectionLayout";
 import AnimatedText from "./components/atoms/animatedText/animatedText";
 import AnimatedLetters from "./components/atoms/animatedLetters/AnimatedLetters";
+import Arrow from "/public/icons/arrow";
 
 import rock1 from "/public/images/LandscapeRock1.png"
 import rock1_2 from "/public/images/LandscapeRock1-2.jpg"
@@ -40,7 +41,10 @@ export default function Home() {
               </div>
               <div className={styles.heroContainerTextBottom}>
                 <AnimatedLetters text="OFFCUT" className={styles.title}/>
-                <h2>info</h2>
+                <div className={styles.heroArrow}>
+                  <Arrow rotation={180} /> 
+                </div>
+                {/* <h2>info</h2> */}
               </div>
             </div>
             <HoverImage />
