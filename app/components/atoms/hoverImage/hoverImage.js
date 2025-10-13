@@ -21,8 +21,8 @@ export default function HoverImage() {
       targetX = 0,
       targetY = 0;
 
-    const strength = 25; // max px shift from center
-    const ease = 0.08; // easing for smooth follow
+    const strength = 35; // max px shift from center
+    const ease = 0.015; // easing for smooth follow
 
     const animate = () => {
       currentX += (targetX - currentX) * ease;
@@ -36,8 +36,8 @@ export default function HoverImage() {
       const rect = el.getBoundingClientRect();
       const cx = rect.left + rect.width / 2;
       const cy = rect.top + rect.height / 2;
-      const dx = e.clientX - cx;
-      const dy = e.clientY - cy;
+        const dx = (e.clientX - cx); // divide by 10 to dampen motion
+        const dy = (e.clientY - cy);
 
       // Clamp to keep image from exposing background
       const maxX = Math.min(Math.max((dx / rect.width) * strength, -strength), strength);
