@@ -23,7 +23,8 @@ import chalk2_2 from "/public/images/Chalk2_2.png"
 import chalk2_3 from "/public/images/Chalk2_3.png"
 import chalkLandscape1 from "/public/images/ChalkLandscape1.png"
 import chalkLandscape2 from "/public/images/ChalkLandscape2.png"
-
+import heroRock from "/public/images/TransparentRockHero1.png"
+import HoverImage from "./components/atoms/hoverImage/hoverImage";
 
 export default function Home() {
   return (
@@ -33,8 +34,8 @@ export default function Home() {
         <section className="pageLayout">
           <div className={styles.heroContainer}>
             {/* <h1 className={styles.title}>OFFCUT</h1> */}
-            <video src="/videos/ChalkAnimationWAnimeLogo.mp4" autoPlay loop />
-            {/* <MediaBlock image={rock1} alt="A stone on a white background" /> */}
+            <HoverImage />
+            {/* <MediaBlock image={heroRock} alt="A stone on a white background" /> */}
           </div>
           <SectionLayout minHeight='30lvh'>
             <h2>info</h2>
