@@ -6,11 +6,12 @@ export default function SectionLayout({
     sectionHeight = 'auto',
     display = 'flex',
     placeItems = 'center',
+    paddingBottom = 'var(--layoutSpacing)',
     children,
  }) {
     return (
         <>
-            <div style={{height: height, minHeight: minHeight, display: display, placeItems: placeItems}} className={styles.sectionWrap}>
+            <div style={{height: height, minHeight: minHeight, display: display, placeItems: placeItems, paddingBottom: paddingBottom,}} className={styles.sectionWrap}>
                 <div className={styles.section} style={{height: sectionHeight}}>
                     {children}
                 </div>

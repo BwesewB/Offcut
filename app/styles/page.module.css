@@ -6,10 +6,6 @@
   /* border: 1px solid red; */
 }
 
-.title {
-  font-size: 100px;
-}
-
 .textSection1a {
   grid-column: 2/6;
 }
@@ -61,6 +57,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap);
+  padding-bottom: var(--layoutSpacing);
 }
 
 .heroContainer {
@@ -71,7 +68,50 @@
   grid-column: 1/6;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   overflow: hidden;
   margin-left: calc(-1 * var(--sidePadding));
+  margin-top: -2px;
+}
+
+.heroContainerText {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  pointer-events: none;
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+  padding-left: var(--sidePadding);
+  padding-right: var(--sidePadding);
+}
+
+.heroContainerTextTop {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heroContainerTextBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* border: 1px solid red; */
+}
+
+.title {
+  font-size: 10rem;
+}
+
+.secondSection {
+  /* min-height: 100lvh;
+  margin-left: calc(-1 * var(--sidePadding));
+  margin-right: calc(-1 * var(--sidePadding));
+  padding-left: var(--sidePadding);
+  padding-right: var(--sidePadding);
+  background-image: url("/images/TextureRock.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center; */
 }

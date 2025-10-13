@@ -7,6 +7,7 @@
   --sidePadding: 24px;
   --gap: 12px;
   --layoutSpacing: clamp(10vw, 20vw, 25vw);
+  --layoutSpacingSmall: clamp(5vw, 10vw, 12.5vw);
   --containerHeight: clamp(30vw, 40vw, 50vw);
 }
 
@@ -79,14 +80,15 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-primary);
   color: var(--black);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h1 {
   font-size: clamp(3rem, 5vw, 4rem);
-  font-weight: 400;
   letter-spacing: clamp(-2px, -0.3vw, -1px);
   text-transform: uppercase;
+  letter-spacing: -0.25rem;
+  line-height: 0.9;
 }
 
 h2 {
@@ -101,6 +103,7 @@ p {
   font-weight: 500;
   line-height: 1.2;
   font-size: 0.875rem;
+  color: var(--black);
 }
 
 .plarge {
@@ -123,5 +126,5 @@ a {
 .pageLayout {
   display: flex;
   flex-direction: column;
-  gap: var(--layoutSpacing);
+  /* gap: var(--layoutSpacing); */
 }
