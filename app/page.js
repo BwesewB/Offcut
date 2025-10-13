@@ -4,7 +4,7 @@ import MediaBlock from "./components/molecules/mediaBlock/MediaBlock";
 import ScrollCycle from "./components/atoms/scrollcycle/ScrollCycle";
 import SectionLayout from "./components/molecules/sectionLayout/sectionLayout";
 import AnimatedText from "./components/atoms/animatedText/animatedText";
-import AnimatedLetters from "./components/atoms/animatedLetters/animatedLetters";
+import AnimatedLetters from "./components/atoms/animatedLetters/AnimatedLetters";
 
 import rock1 from "/public/images/LandscapeRock1.png"
 import rock1_2 from "/public/images/LandscapeRock1-2.jpg"
