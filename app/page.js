@@ -259,6 +259,9 @@ export default function Home() {
           <div style={{ gridColumn: '1 / 5' }}>
               <p className="plarge">Reaching the end just means you’re close to something worth returning to.</p>
           </div>
+          <div style={{ gridColumn: '5 / 6', display: 'flex', justifyContent: 'flex-end' }}>
+            <Arrow rotation={270} /> 
+          </div>
         </SectionLayout>
       }
       topStripB={
