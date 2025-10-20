@@ -13,7 +13,9 @@ export default function HoverImage() {
     if (!el) return;
 
     // Disable on mobile / touch devices
-    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isTouch =
+      window.matchMedia('(pointer: coarse)').matches ||
+      window.matchMedia('(hover: none)').matches;
     if (isTouch) return;
 
     let currentX = 0,
