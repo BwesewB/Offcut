@@ -5,7 +5,7 @@ import ScrollCycle from "./components/atoms/scrollcycle/ScrollCycle";
 import SectionLayout from "./components/molecules/sectionLayout/sectionLayout";
 import AnimatedText from "./components/atoms/animatedText/animatedText";
 import AnimatedLetters from "./components/atoms/animatedLetters/AnimatedLetters";
-import Arrow from "/public/icons/arrow";
+import LottieArrow from "/public/icons/ArrowLottie";
 
 import rock1 from "/public/images/LandscapeRock1.png"
 import rock1_2 from "/public/images/LandscapeRock1-2.jpg"
@@ -42,7 +42,7 @@ export default function Home() {
               <div className={styles.heroContainerTextBottom}>
                 <AnimatedLetters text="OFFCUT" className={styles.title}/>
                 <div className={styles.heroArrow}>
-                  <Arrow rotation={180} /> 
+                  <LottieArrow/>
                 </div>
                 {/* <h2>info</h2> */}
               </div>
@@ -260,7 +260,7 @@ export default function Home() {
               <p className="plarge">Reaching the end just means you’re close to something worth returning to.</p>
           </div>
           <div style={{ gridColumn: '5 / 6', display: 'flex', justifyContent: 'flex-end' }}>
-            <Arrow rotation={270} /> 
+            <LottieArrow rotation={270}/>
           </div>
         </SectionLayout>
       }
