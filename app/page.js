@@ -3,6 +3,7 @@ import styles from "./styles/page.module.css";
 import MediaBlock from "./components/molecules/mediaBlock/MediaBlock";
 import ScrollCycle from "./components/atoms/scrollcycle/ScrollCycle";
 import SectionLayout from "./components/molecules/sectionLayout/sectionLayout";
+import SectionLayoutStack from "./components/organisms/sectionLayoutStack/sectionLayoutStack";
 import AnimatedText from "./components/atoms/animatedText/animatedText";
 import AnimatedLetters from "./components/atoms/animatedLetters/AnimatedLetters";
 import LottieArrow from "/public/icons/ArrowLottie";
@@ -50,50 +51,58 @@ export default function Home() {
             <HoverImage />
           </div>
 
-          <MediaBlock 
-            image={TextureRock} 
-            alt="A stone texture with the Offcut logo" 
-            style={{  
-              marginLeft: 'calc(-1 * var(--sidePadding))', 
-              marginRight: 'calc(-1 * var(--sidePadding))', 
-              width: "100vw", 
-              paddingBottom: 'var(--layoutSpacing)', 
-              paddingTop: "var(--layoutSpacingSmall)"
-            }}
-          />
-          {/* <div className={styles.secondSection}> */}
-            <SectionLayout minHeight='30lvh'>
-              <h2>info</h2>
-              <div className={styles.textSection1a}>
-                <AnimatedText 
-                  text="Offcut is a personal study of material left in its natural state, shaped but not polished. A further exploration can reveal that value isn't always in what is resolved, but in what resists being made familiar."
-                  className={`${"plarge"} ${styles.indentFirstLine}`}
-                  tilt={true}
-                  trigger="80%"
-                />
-              </div>
-            </SectionLayout>
-          {/* </div> */}
-
-          
-
-          <SectionLayout paddingBottom="var(--layoutSpacingSmall)">
-            <div style={{ gridColumn: '1 / 4' }}>
-              <MediaBlock image={rock1} alt="A stone on a white background" />
-            </div>
-            <div style={{ gridColumn: '4 / 5' }}>
-              <MediaBlock image={rock1_2} alt="A stone on a white background" />
-              <p>1</p>
+          <SectionLayout minHeight='30lvh'>
+            <h2>info</h2>
+            <div className={styles.textSection1a}>
+              <AnimatedText 
+                text="Offcut is a personal study of material left in its natural state, shaped but not polished. A further exploration can reveal that value isn't always in what is resolved, but in what resists being made familiar."
+                className={`${"plarge"} ${styles.indentFirstLine}`}
+                tilt={true}
+                trigger="80%"
+              />
             </div>
           </SectionLayout>
 
-          <SectionLayout>
-            <div className={styles.textSectionWTitle} style={{ gridColumn: '2 / 3' }}>
-              <h2>tora</h2>
-              <AnimatedText 
-                text="Lorem ipsum dolor sit amet consectetur. Pellentesque in sed sem in lectus vitae. Ipsum integer tincidunt venenatis quis. Enim ac urna nisl ullamcorper purus sollicitudin phasellus. Dictum consequat neque dui dolor consequat consequat integer eget amet. Consequat eget porttitor id at etiam vulputate in vivamus. Mauris aliquam lorem lectus arcu vitae sodales sollicitudin posuere cursus. Vestibulum volutpat commodo amet dolor. "
-              />
-            </div>
+          
+          <SectionLayoutStack
+            gap="48px"
+            sections={[
+              {
+                children: 
+                <>
+                  <div className={styles.textSectionWTitle} style={{ gridColumn: '1 / 2'}}>
+                    <h4>01.</h4>
+                    <h2>tora</h2>
+                  </div>
+                  <div style={{ gridColumn: '2 / 3'}}>
+                    <h3>XXX.</h3>
+                  </div>
+                  <div style={{ gridColumn: '3 / 5'}}>
+                    <AnimatedText 
+                      text="Each piece begins with a simple volume, then changes through pressure, removal, and restraint. Material is left close to its original form, adjusted only as much as necessary to hold its shape. Rather than aiming for resolution, the process allows surfaces to remain uneven, fractured, and exposed."
+                    />
+                  </div>
+                </>
+                  ,
+              },
+              {
+                children:
+                  <> 
+                    <div style={{ gridColumn: '2 / 5' }}>
+                      <MediaBlock image={rock1} alt="A stone on a white background" />
+                    </div>
+                    <div style={{ gridColumn: '5 / 6' }}>
+                      <MediaBlock image={rock1_2} alt="A stone on a white background" />
+                      <p>1</p>
+                    </div>
+                  </>,
+                paddingBottom: "var(--layoutSpacingSmall)",
+              },
+            ]}
+          />
+
+          <SectionLayout paddingBottom="var(--layoutSpacingSmall)">
+            
           </SectionLayout>
 
           <SectionLayout paddingBottom="var(--layoutSpacingSmall)">

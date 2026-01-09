@@ -1,6 +1,7 @@
 :root {
   --black: #1e1e1e;
   --white: #f3f3f3;
+  --gray: #C2C2C2;
 
   --font-primary: 'Sora', sans-serif;
   --font-secondary: 'Rethink Sans', sans-serif;
@@ -39,6 +40,13 @@ body {
   font-family: 'Sora';
   src: url('/fonts/Sora-Medium.ttf') format('truetype');
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/fonts/Sora-SemiBold.ttf') format('truetype');
+  font-weight: 600;
   font-style: normal;
 }
 
@@ -93,9 +101,17 @@ h1 {
 
 h2 {
   font-size: 2.25rem;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: clamp(-2px, -0.3vw, -1px);
   text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: clamp(-1px, -0.2vw, -0.5px);
+  text-transform: uppercase;
+  color: var(--gray);
 }
 
 p {
