@@ -94,7 +94,6 @@ export default function Home() {
                     </div>
                     <div style={{ gridColumn: '5 / 6' }}>
                       <MediaBlock image={rock1_2} alt="A stone on a white background" />
-                      <p>1</p>
                     </div>
                   </>,
               },
@@ -109,8 +108,8 @@ export default function Home() {
                 <>
                   <div style={{ gridColumn: '1 / 2'}}>
                     <MiniTextStack
-                      grayText="Fig 1."
-                      blackText="1: A Perfect Circle"
+                      grayText="Figure 1"
+                      blackText="A Perfect Circle"
                     />
                   </div>
                   <div style={{ gridColumn: '1 / 3', paddingTop: 'var(--gap)'}}>
@@ -182,10 +181,11 @@ export default function Home() {
                 children:
                   <> 
                       <div style={{ gridColumn: '1 / 2' }}>
-                        <div>
-                          <p className="pBold">Refinement</p>
-                          <p style={{ color: "var(--gray)", paddingTop: "var(--gap)" }}>Over time, small refinements begin to accumulate. Each adjustment improves something, but it also changes the original intention.</p>
-                        </div>
+                        <MiniTextStack
+                          paddingBottom={true}
+                          grayText="Refinement"
+                          blackText="Over time, small refinements begin to accumulate. Each adjustment improves something, but it also changes the original intention."
+                        />
                       </div>
                       <div style={{ gridColumn: '2 / 3' }}>
                         <MediaBlock image={rock2vert1} alt="A stone on a white background" width='100%'/>
@@ -270,10 +270,10 @@ export default function Home() {
 
           <SectionLayout paddingBottom="0">
             <div className={styles.textSectionxa}>
-              <div style={{ width: "100%" }}>
-                <p className="pBold">Lorem ipsum dolor </p>
-                <p style={{ color: "var(--gray)" }}>sit amet consectetur.</p>
-              </div>
+              <MiniTextStack
+                grayText="LOREMIPSUN"
+                blackText="DOLORSIETAMINDS"
+              />
               <AnimatedText
                 color="var(--gray)"
                 text="With that reconsideration comes the urge to strengthen the thinking behind it, to clarify what it means and shape it into something that feels more deliberate and complete. Each adjustment promises a clearer version of the same idea, yet every change also replaces the moment that existed before it. What began as something simple slowly becomes layered with decisions that arrived later. At some point a quieter question begins to appear, one that is harder to resolve than the changes themselves."
@@ -300,21 +300,40 @@ export default function Home() {
          {/* style={{ border: '1px solid red' }} */}
           <SectionLayout>
             <div style={{ gridColumn: '1 / 2' }}>
+              <div style={{ gridColumn: '1 / 2', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+                <MiniTextStack
+                  grayText="A loop"
+                  blackText="Repeating again"
+                />
+                <AnimatedText 
+                  color="var(--gray)"
+                  text="What remains visible at the end is rarely the struggle itself, but the faint evidence that it happened at all, the subtle residue of thinking and making that lingers long after the effort has passed. Those traces, small and temporary as they are, often become the only guide forward, quietly suggesting where to reach next and inviting you to continue exploring what was built along the way."
+                  reverse={true}
+                />
+              </div>
+            </div>
+            <div style={{ gridColumn: '3 / 4'}}>
               <MediaBlock image={chalk2_1} alt="A stone on a white background" />
             </div>
-            <div style={{ gridColumn: '2 / 3' }}>
+            <div style={{ gridColumn: '4 / 5' }}>
               <MediaBlock image={chalk2_2} alt="A stone on a white background" />
-            </div>
-            <div style={{ gridColumn: '3 / 4' }}>
-              <AnimatedText 
-                text="Lorem ipsum dolor sit amet consectetur. Enim tellus condimentum in id enim vel etiam aliquet donec. Amet eget suspendisse et in massa dolor. Enim sed netus integer donec a potenti orci. Aliquam fames amet morbi porta. Aliquam nulla condimentum eget urna morbi convallis. Quis vehicula fames lectus nisi at pulvinar in semper in. Consectetur interdum bibendum quisque quisque risus sed accumsan tortor habitasse. Suspendisse convallis nulla bibendum egestas venenatis suspendisse sit. Quis mauris arcu posuere mattis enim. Interdum eget auctor fermentum euismod at libero fames. Pretium in feugiat viverra feugiat nulla odio."
-                reverse={true}
-              />
             </div>
             <div style={{ gridColumn: '5 / 6' }}>
               <MediaBlock image={chalk2_3} alt="A stone on a white background" />
             </div>
+            <div style={{ gridColumn: '3 / 4' }}>
+
+            </div>
+            <div style={{ gridColumn: '4 / 6' }}>
+              <div style={{ paddingTop: 'var(--gap)' }}>
+                <AnimatedText 
+                  text="Each piece begins with a simple volume, then changes through pressure, removal, and restraint. Material is left close to its original form, adjusted only as much as necessary to hold its shape. Rather than aiming for resolution, the process allows surfaces to remain uneven, fractured, and exposed."
+                  reverse={true}
+                />
+              </div>
+            </div>
           </SectionLayout>
+
 
           <SectionLayout>
             <div style={{ gridColumn: '4 / 6', marginBottom: 'var(--gap)' }}>
@@ -337,30 +356,36 @@ export default function Home() {
           </SectionLayout>
 
           <SectionLayout>
-            <div style={{ gridColumn: '1 / 3' }}>
+            <div style={{ gridColumn: '1 / 4', display: 'flex', alignItems: 'flex-end' }}>
               <AnimatedText 
-                text="Lorem ipsum dolor sit amet consectetur. Iaculis potenti lobortis ornare vel. In sed libero arcu senectus et."
-                className="plarge"
+                text="CHALK, a residue left over after both movement and thought have searched for something to hold."
+                className={`${"plarge"} ${styles.indentFirstLine2}`}
                 reverse={true}
                 tilt={true}
               />
             </div>
-            <div style={{ gridColumn: '4 / 5' }}>
+            <div style={{ gridColumn: '5 / 6' }}>
               <MediaBlock image={chalk1} alt="A stone on a white background" width='80%' />
             </div>
           </SectionLayout>
 
-          <SectionLayout>
-            <div style={{ gridColumn: '1 / 4' }}>
-              <MediaBlock image={chalkLandscape1} alt="A stone on a white background" />
+          <SectionLayout  paddingBottom="0"> 
+            <div style={{ gridColumn: '1 / 2', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <MiniTextStack
+                grayText="LOREMIPSUN"
+                blackText="DOLORSIETAMINDS"
+              />
+              <div className={styles.textSectionWTitle}>
+                <h4>04.</h4>
+                <h2>chalk</h2>
+              </div>          
             </div>
-          </SectionLayout>
-
-          <SectionLayout paddingBottom="0">
-            <div style={{ gridColumn: '3 / 5' }}>
+            <div style={{ gridColumn: '3 / 6'}}>
+                <MediaBlock image={chalkLandscape1} alt="A piece of chalk" />
+            </div>
+            <div style={{ gridColumn: '3 / 5', paddingTop: 'var(--gap)'}}> 
               <AnimatedText 
-                text="Lorem ipsum dolor sit amet consectetur. Enim tellus condimentum in id enim vel etiam aliquet donec. Amet eget suspendisse et in massa dolor. Enim sed netus integer donec a potenti orci. Aliquam fames amet morbi porta. Aliquam nulla condimentum eget urna morbi convallis. Quis vehicula fames lectus nisi at pulvinar in semper in. Consectetur interdum bibendum quisque quisque risus sed accumsan tortor habitasse. Suspendisse convallis nulla bibendum egestas venenatis suspendisse sit. Quis mauris arcu posuere mattis enim. Interdum eget auctor fermentum euismod at libero fames. Pretium in feugiat viverra feugiat nulla odio. Blandit nisl diam purus orci mauris penatibus molestie diam amet. Ipsum eget donec tellus nibh nunc dapibus neque. Leo dolor mi habitasse nibh mattis quis. Viverra fermentum mattis morbi orci ac aliquet magna id. Nec aenean id elementum urna dictumst vitae dui. Viverra amet mi mattis orci amet non velit. Etiam magna erat odio ultrices fames. Sed varius tincidunt duis ac consequat scelerisque tellus nec. Senectus pretium porttitor euismod diam etiam tristique viverra ornare a. Dignissim eu consectetur tristique tellus tempus dictum sed venenatis. Quis etiam non amet eget lacus faucibus in elit vitae. Vitae proin sagittis eu curabitur sed ornare. Pellentesque ullamcorper fusce ullamcorper pharetra fusce amet."
-                className={styles.textSection1b}
+                text="The path does not disappear after reaching its end; it simply asks to be approached from another direction. Movement continues by returning through familiar ground, relying on brief points of contact."
                 reverse={true}
               />
             </div>

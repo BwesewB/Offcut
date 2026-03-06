@@ -3,11 +3,12 @@
 export default function MiniTextStack({
     grayText = "",
     blackText = "",
+    paddingBottom = false,
 }) {
   return (
-    <div style={{display: "flex", flexDirection: "column"}}>
-      <h4>{grayText}</h4>
-      <h4 style={{color: "var(--black)"}}>{blackText}</h4>
+    <div style={{display: "flex", flexDirection: "column", width: "100%"}}>
+      <p style={{ color: "var(--gray)", paddingBottom: paddingBottom ? "var(--gap)" : 0, }}>{grayText}</p>
+      <p className="pBold">{blackText}</p>
     </div>
   )
 }  
