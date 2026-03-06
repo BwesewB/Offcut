@@ -11,33 +11,23 @@ const MediaBlock = ({
   width,
   style = {},
   parallax = false,
-  parallaxStrength = 1,
-  parallaxScale = 1.2
+  parallaxScale = 1.15
 }) => {
   const wrapperRef = useRef(null);
   const imageRef = useRef(null);
   const [offsetY, setOffsetY] = useState(0);
   const [maxTravel, setMaxTravel] = useState(0);
-  const [scaleY, setScaleY] = useState(1);
 
   const calculateMaxTravel = useCallback(() => {
     if (!parallax || !imageRef.current) return;
-
     const imgHeight = imageRef.current.offsetHeight;
     if (imgHeight === 0) return;
-
     const extraPixels = (imgHeight * parallaxScale - imgHeight) / 2;
     setMaxTravel(extraPixels);
   }, [parallax, parallaxScale]);
 
   useEffect(() => {
     if (!parallax) return;
-    setScaleY(parallaxScale);
-  }, [parallax, parallaxScale]);
-
-  useEffect(() => {
-    if (!parallax) return;
-
     const timeout = setTimeout(calculateMaxTravel, 100);
     window.addEventListener('resize', calculateMaxTravel);
     return () => {
@@ -61,19 +51,16 @@ const MediaBlock = ({
       const elementCenter = rect.top + rect.height / 2;
       const viewportCenter = viewportHeight / 2;
       const distanceFromCenter = elementCenter - viewportCenter;
-
-      // Normalize against total possible travel so movement is evenly spread
-      // across the entire time the element is on screen
       const totalTravelDistance = viewportHeight / 2 + rect.height / 2;
-      const normalizedOffset = (distanceFromCenter / totalTravelDistance) * maxTravel * parallaxStrength;
 
-      setOffsetY(normalizedOffset);
+      // Maps screen position directly to full available headroom
+      setOffsetY((distanceFromCenter / totalTravelDistance) * maxTravel);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [parallax, parallaxStrength, maxTravel]);
+  }, [parallax, maxTravel]);
 
   let wrapperStyle;
   if (width) {
@@ -86,7 +73,7 @@ const MediaBlock = ({
 
   const imageStyle = parallax
     ? {
-        transform: `translateY(${offsetY}px) scale(${scaleY})`,
+        transform: `translateY(${offsetY}px) scale(${parallaxScale})`,
         transition: 'transform 0.05s linear',
         transformOrigin: 'center center',
       }

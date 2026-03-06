@@ -89,6 +89,7 @@ export default function Home() {
                     <div style={{ gridColumn: '2 / 5' }}>
                       <MediaBlock 
                         image={rock1} 
+                        parallaxScale={1.2}
                         parallax={true}
                         alt="A stone on a white background" 
                       />
@@ -162,7 +163,12 @@ export default function Home() {
                 children:
                   <> 
                     <div style={{ gridColumn: '1 / 6' }}>
-                      <MediaBlock image={rock2} alt="A stone on a white background" />
+                      <MediaBlock 
+                        image={rock2} 
+                        alt="A stone on a white background" 
+                        parallaxScale={1.3}
+                        parallax={true}
+                      />
                     </div>
                   </>,
               },
