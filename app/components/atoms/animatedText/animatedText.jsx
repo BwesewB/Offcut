@@ -15,6 +15,7 @@ export default function AnimatedText({
   reverse = false,
   tilt = false,
   trigger = '85%',
+  color="var(--black)"
 }) {
   const el = useRef(null);
   const splitRef = useRef(null);
@@ -106,7 +107,7 @@ export default function AnimatedText({
 
   return (
     <div className={styles.animatedTextContainer}>
-      <p ref={el} className={`${styles.animatedText} ${className}`}>
+      <p ref={el} className={`${styles.animatedText} ${className}`} style={{ color: color, }}>
         {text}
       </p>
     </div>

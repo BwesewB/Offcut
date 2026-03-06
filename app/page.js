@@ -241,15 +241,6 @@ export default function Home() {
 
 
           <SectionLayout>
-{/* <div className={styles.textSection1a}>
-              <AnimatedText 
-                text="Offcut is a personal study of material left in its natural state, shaped but not polished. A further exploration can reveal that value isn't always in what is resolved, but in what resists being made familiar."
-                className={`${"plarge"} ${styles.indentFirstLine}`}
-                tilt={true}
-                trigger="80%"
-              />
-            </div> */}
-
             <div style={{ gridColumn: '1 / 4' }}>
               <AnimatedText 
                 text="The longer something exists, the more versions of it begin to accumulate. Each one slightly different from the last."
@@ -260,31 +251,43 @@ export default function Home() {
             </div>
           </SectionLayout>
           
+
+          
           <SectionLayout paddingBottom="var(--layoutSpacingSmall)">
-            <div style={{ gridColumn: '1 / 4' }}>
-              <MediaBlock image={rock3} alt="Rock 3. Fishbone" />
+            <div style={{ gridColumn: '1 / 4'}}>
+                <MediaBlock image={rock3} alt="Rock 3. Fishbone" />
             </div>
-            <div style={{ gridColumn: '5 / 6', alignSelf: 'flex-end' }}>
+            <div style={{ gridColumn: '4 / 6', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div className={styles.textSectionWTitle}>
+                <h4>03.</h4>
+                <h2>bone</h2>
+              </div>
               <AnimatedText 
-                text="Lorem ipsum dolor sit amet consectetur. Enim tellus condimentum in id enim vel etiam aliquet donec. Amet eget suspendisse et in massa dolor. Enim sed netus integer donec a potenti orci. Aliquam fames amet morbi porta. Aliquam nulla condimentum eget urna morbi convallis. Quis vehicula fames lectus nisi at pulvinar in semper in. Consectetur interdum bibendum quisque quisque risus sed accumsan tortor habitasse. Suspendisse convallis nulla bibendum egestas venenatis suspendisse sit. Quis mauris arcu posuere mattis enim. Interdum eget auctor fermentum euismod at libero fames. Pretium in feugiat viverra feugiat nulla odio."
+                text="An idea can begin simply, existing in a state where it does not need to fully explain itself or justify the direction it might eventually take. Over time, however, returning to that same idea introduces new interpretations, and what once felt settled begins to feel open again in ways that were not originally expected. What was once accepted as it was now quietly invites reconsideration."
               />
             </div>
-            <h2 style={{ gridColumn: '1 / 4' }}>bone</h2>
           </SectionLayout>
 
           <SectionLayout paddingBottom="0">
             <div className={styles.textSectionxa}>
-              <AnimatedText 
-                text="Lorem ipsum dolor sit amet consectetur. Enim tellus condimentum in id enim vel etiam aliquet donec. Amet eget suspendisse et in massa dolor. Enim sed netus integer donec a potenti orci. Aliquam fames amet morbi porta. Aliquam nulla condimentum eget urna morbi convallis. Quis vehicula fames lectus nisi at pulvinar in semper in. Consectetur interdum bibendum quisque quisque risus sed accumsan tortor habitasse. Suspendisse convallis nulla bibendum egestas venenatis suspendisse sit. Quis mauris arcu posuere mattis enim. Interdum eget auctor fermentum euismod at libero fames. Pretium in feugiat viverra feugiat nulla odio."
+              <div style={{ width: "100%" }}>
+                <p className="pBold">Lorem ipsum dolor </p>
+                <p style={{ color: "var(--gray)" }}>sit amet consectetur.</p>
+              </div>
+              <AnimatedText
+                color="var(--gray)"
+                text="With that reconsideration comes the urge to strengthen the thinking behind it, to clarify what it means and shape it into something that feels more deliberate and complete. Each adjustment promises a clearer version of the same idea, yet every change also replaces the moment that existed before it. What began as something simple slowly becomes layered with decisions that arrived later. At some point a quieter question begins to appear, one that is harder to resolve than the changes themselves."
               />
             </div>
             <div style={{ gridColumn: '3 / 5' }}>
-              <p>1</p>
-              <MediaBlock image={rock3_2} alt="Rock 3. Fishbone" width='80%'/>
+              <MediaBlock image={rock3_2} alt="Rock 3. Fishbone" width='100%'/>
             </div>
             <div style={{ gridColumn: '5 / 6' }}>
-              <p>2</p>
               <MediaBlock image={rock3_3} alt="Rock 3. Fishbone" />
+              <AnimatedText 
+                text="Is the idea becoming stronger through refinement, or simply becoming something different from the moment it first appeared? The process continues either way, circling between the desire to improve what exists and the hesitation to move too far from where it began."
+              />
+              <p></p>
             </div>
           </SectionLayout>
         </section>
