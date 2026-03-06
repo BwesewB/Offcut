@@ -4,7 +4,7 @@ export default function SectionLayoutStack({
   sections = [],
   gap = "var(--layoutSpacing)", // spacing between each SectionLayout
   align = "stretch",
-  paddingBottom = "var(--layoutSpacingSmall)",
+  paddingBottom = "var(--layoutSpacing)",
 }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap, alignItems: align, paddingBottom: paddingBottom }}>
