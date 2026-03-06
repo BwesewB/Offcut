@@ -10,7 +10,7 @@
   grid-column: 2/6;
 }
 
-.textSection1a .indentFirstLine {
+.indentFirstLine {
   /* ensure a known line-height; set your own value */
   line-height: 1.1;
   --lh: 1.1;
@@ -21,11 +21,25 @@
 }
 
 /* the trick: a 1-line tall float that pushes ONLY the first line right */
-.textSection1a .indentFirstLine::before {
+.indentFirstLine::before {
   content: "";
   float: left;
   width: var(--indent);
   /* height: 1lh is best; fallback uses your --lh */
+  height: 1lh;
+  height: calc(1em * var(--lh));
+}
+
+.indentFirstLine2 {
+  line-height: 1.1;
+  --lh: 1.1;
+  --indent: calc((100% - (3 * var(--gap))) / 3 + var(--gap));
+}
+
+.indentFirstLine2::before {
+  content: "";
+  float: left;
+  width: var(--indent);
   height: 1lh;
   height: calc(1em * var(--lh));
 }
@@ -72,6 +86,7 @@
   overflow: hidden;
   margin-left: calc(-1 * var(--sidePadding));
   margin-top: -2px;
+  margin-bottom: var(--layoutSpacing);
 }
 
 .heroContainerText {

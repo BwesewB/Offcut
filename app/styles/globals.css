@@ -6,6 +6,8 @@
   --font-primary: 'Sora', sans-serif;
   --font-secondary: 'Rethink Sans', sans-serif;
   --sidePadding: 24px;
+  --containerGap: 20svh;
+  --heightGap: 48px;
   --gap: 12px;
   --layoutSpacing: clamp(10vw, 20vw, 25vw);
   --layoutSpacingSmall: clamp(5vw, 10vw, 12.5vw);
@@ -106,24 +108,35 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: clamp(-1px, -0.2vw, -0.5px);
+  /* text-transform: uppercase; */
+}
+
 h4 {
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: clamp(-1px, -0.2vw, -0.5px);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: var(--gray);
 }
 
 p {
   font-family: var(--font-secondary);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.2;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: var(--black);
 }
 
+.pBold {
+  font-weight: 700;
+}
+
 .plarge {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 1.1;
 }

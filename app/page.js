@@ -6,6 +6,7 @@ import SectionLayout from "./components/molecules/sectionLayout/sectionLayout";
 import SectionLayoutStack from "./components/organisms/sectionLayoutStack/sectionLayoutStack";
 import AnimatedText from "./components/atoms/animatedText/animatedText";
 import AnimatedLetters from "./components/atoms/animatedLetters/AnimatedLetters";
+import MiniTextStack from "./components/molecules/miniTextStack/miniTextStack";
 import LottieArrow from "/public/icons/ArrowLottie";
 
 import rock1 from "/public/images/LandscapeRock1.png"
@@ -20,6 +21,7 @@ import rock3 from "/public/images/LandscapeRock3.jpg"
 import rock3_2 from "/public/images/Rock4-2.png"
 import rock3_3 from "/public/images/Rock4-3.jpg"
 import TextureRock from "/public/images/TextureRockLogo.png"
+import PerfectCircle from "/public/icons/Ellipse2.svg"
 
 import chalk1 from "/public/images/Chalk1.png"
 import chalk2_1 from "/public/images/Chalk2_1.png"
@@ -63,9 +65,8 @@ export default function Home() {
             </div>
           </SectionLayout>
 
-          
           <SectionLayoutStack
-            gap="48px"
+            gap="var(--heightGap)"
             sections={[
               {
                 children: 
@@ -96,26 +97,116 @@ export default function Home() {
                       <p>1</p>
                     </div>
                   </>,
-                paddingBottom: "var(--layoutSpacingSmall)",
               },
             ]}
           />
 
-          <SectionLayout paddingBottom="var(--layoutSpacingSmall)">
-            
-          </SectionLayout>
+          <SectionLayoutStack
+            gap="var(--heightGap)"
+            sections={[
+              {
+                children: 
+                <>
+                  <div style={{ gridColumn: '1 / 2'}}>
+                    <MiniTextStack
+                      grayText="Fig 1."
+                      blackText="1: A Perfect Circle"
+                    />
+                  </div>
+                  <div style={{ gridColumn: '1 / 3', paddingTop: 'var(--gap)'}}>
+                    <p>A series of perfect shapes questioning what makes something truly interesting.</p>
+                  </div>
+                </>,
+              },
+              {
+                children:
+                  <> 
+                    <div style={{ gridColumn: '1 / 6'}}>
+                      <MediaBlock image={PerfectCircle} alt="ww" />
+                    </div>
+                  </>,
+              },
+            ]}
+          />
 
-          <SectionLayout paddingBottom="var(--layoutSpacingSmall)">
-            <div style={{ gridColumn: '1 / 6' }}>
-              <MediaBlock image={rock2} alt="A stone on a white background" />
-              <div className={styles.textSection3a}>
-                <h2>beak</h2>
-                <p>Lorem ipsum dolor sit amet consectetur. </p>
-              </div>
-            </div>
-          </SectionLayout>
+          <SectionLayoutStack
+            gap="calc(var(--heightGap) / 2)"
+            sections={[
+              {
+                children: 
+                <>
+                  <div className={styles.textSectionWTitle} style={{ gridColumn: '1 / 2'}}>
+                    <h4>02.</h4>
+                    <h2>fragments</h2>
+                  </div>
+                  <div style={{ gridColumn: '2 / 3'}}>
+                    <p>Moments where ideas briefly take shape.</p>
+                  </div>
+                  <div style={{ gridColumn: '4 / 5'}}>
+                    <div className={styles.heroArrow}>
+                      <LottieArrow rotation={270} size="6rem"/>
+                    </div>
+                  </div>
+                </>,
+              },
+              {
+                children:
+                  <> 
+                    <div style={{ gridColumn: '1 / 6' }}>
+                      <MediaBlock image={rock2} alt="A stone on a white background" />
+                    </div>
+                  </>,
+              },
+            ]}
+          />
 
-          <div className={styles.beakDiv}>
+          <SectionLayoutStack
+            gap="var(--containerGap)"
+            sections={[
+              {
+                children: 
+                <>
+                  <div style={{ gridColumn: '1 / 2', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <MiniTextStack
+                      grayText="Stone Chiseling "
+                      blackText="Debitage"
+                    />
+                    <p>When stone is cut, the removed material becomes debitage. These fragments carry information about how the cut was made, including force, precision, and restraint. The surface that remains is shaped as much by what was taken away as by what was left intact.</p>
+                  </div>
+                  <div style={{ gridColumn: '3 / 6'}}>
+                      <MediaBlock image={rock2_1} alt="A stone on a white background" />
+                  </div>
+                </>,
+              },
+              {
+                children:
+                  <> 
+                      <div style={{ gridColumn: '1 / 2' }}>
+                        <div>
+                          <p className="pBold">Refinement</p>
+                          <p style={{ color: "var(--gray)", paddingTop: "var(--gap)" }}>Over time, small refinements begin to accumulate. Each adjustment improves something, but it also changes the original intention.</p>
+                        </div>
+                      </div>
+                      <div style={{ gridColumn: '2 / 3' }}>
+                        <MediaBlock image={rock2vert1} alt="A stone on a white background" width='100%'/>
+                        <p style={{ paddingTop: "var(--gap)" }}>The process of refining something can slowly move it further from the moment it first appeared. What began as a simple idea becomes layered with decisions made later.</p>
+                      </div>
+                      <div style={{ gridColumn: '3 / 4' }}>
+                        <MediaBlock image={rock2vert4} alt="A stone on a white background" width='100%'/>
+                      </div>
+                      <div style={{ gridColumn: '4 / 5' }}>
+                        <MediaBlock image={rock2vert2} alt="A stone on a white background" width='100%'/>
+                        <p className="pBold" style={{ paddingTop: "var(--gap)" }}>Refinement clarifies, but can also erase.</p>
+                      </div>
+                      <div style={{ gridColumn: '5 / 6' }}>
+                        <MediaBlock image={rock2vert3} alt="A stone on a white background" width='100%'/>
+                      </div>
+                  </>,
+              },
+            ]}
+          />
+
+          {/* <div className={styles.beakDiv}>
             <SectionLayout paddingBottom="0">
               <div style={{ gridColumn: '1 / 2' }}>
                 <AnimatedText 
@@ -146,13 +237,23 @@ export default function Home() {
                 <MediaBlock image={rock2vert3} alt="A stone on a white background" width='90%'/>
               </div>
             </SectionLayout>
-          </div>
+          </div> */}
+
 
           <SectionLayout>
+{/* <div className={styles.textSection1a}>
+              <AnimatedText 
+                text="Offcut is a personal study of material left in its natural state, shaped but not polished. A further exploration can reveal that value isn't always in what is resolved, but in what resists being made familiar."
+                className={`${"plarge"} ${styles.indentFirstLine}`}
+                tilt={true}
+                trigger="80%"
+              />
+            </div> */}
+
             <div style={{ gridColumn: '1 / 4' }}>
               <AnimatedText 
-                text="Lorem ipsum dolor sit amet consectetur. Iaculis potenti lobortis ornare vel. In sed libero arcu senectus et niwsl."
-                className="plarge"
+                text="The longer something exists, the more versions of it begin to accumulate. Each one slightly different from the last."
+                className={`${"plarge"} ${styles.indentFirstLine2}`}
                 tilt={true}
                 trigger="80%"
               />
