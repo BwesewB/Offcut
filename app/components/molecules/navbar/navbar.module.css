@@ -10,7 +10,7 @@
 }
 
 .logo {
-    height: 1.5rem;
+    height: 1rem;
     padding-left: var(--sidePadding);
     padding-right: var(--sidePadding);
 }

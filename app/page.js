@@ -120,7 +120,7 @@ export default function Home() {
                   </div>
                   <div style={{ gridColumn: '1 / 3', paddingTop: 'var(--gap)'}}>
                     <AnimatedText 
-                      text="A series of perfect shapes questioning what makes something truly interesting."
+                      text="Every attempt of refinement circles back to the question that created it."
                     />
                   </div>
                 </>,
@@ -189,7 +189,6 @@ export default function Home() {
                     <AnimatedText 
                       text="When stone is cut, the removed material becomes debitage. These fragments carry information about how the cut was made, including force, precision, and restraint. The surface that remains is shaped as much by what was taken away as by what was left intact."
                     />
-                    {/* <p>When stone is cut, the removed material becomes debitage. These fragments carry information about how the cut was made, including force, precision, and restraint. The surface that remains is shaped as much by what was taken away as by what was left intact.</p> */}
                   </div>
                   <div style={{ gridColumn: '3 / 6'}}>
                       <MediaBlock 
@@ -321,7 +320,7 @@ export default function Home() {
                       <h2>bone</h2>
                     </div>
                     <AnimatedText 
-                      text="An idea can begin simply, existing in a state where it does not need to fully explain itself or justify the direction it might eventually take. Over time, however, returning to that same idea introduces new interpretations, and what once felt settled begins to feel open again in ways that were not originally expected."
+                      text="Bone suggests structure, something internal that remains even when the surface continues to change. Over time, however, returning to that same idea introduces new interpretations, and what once felt settled begins to feel open again in ways that were not originally expected."
                     />
                   </div>
                 </>,
@@ -331,12 +330,12 @@ export default function Home() {
                   <> 
                     <div className={styles.textSectionxa}>
                       <MiniTextStack
-                        grayText="LOREMIPSUN"
-                        blackText="DOLORSIETAMINDS"
+                        grayText="Returning Ideas"
+                        blackText="Structure Never Changing"
                       />
                       <AnimatedText
                         color="var(--gray)"
-                        text="With reconsideration comes the urge to strengthen the thinking behind it, to clarify what it means and shape it into something that feels more deliberate and complete. Each adjustment promises a clearer version of the same idea, yet every change also replaces the moment that existed before it. What began as something simple slowly becomes layered with decisions that arrived later. At some point a quieter question begins to appear, one that is harder to resolve than the changes themselves."
+                        text="With reconsideration comes the urge to strengthen the thinking behind it, to clarify what it means and shape it into something that feels more deliberate and complete. Each adjustment promises a clearer version of the same idea, yet every change also replaces the moment that existed before it. What began as something simple slowly becomes layered with decisions that arrived later. Bone is what remains after other layers have changed or disappeared, holding the shape that everything else once formed around."
                       />
                     </div>
                     <div style={{ gridColumn: '3 / 5' }}>
@@ -374,12 +373,12 @@ export default function Home() {
             <div style={{ gridColumn: '1 / 2' }}>
               <div style={{ gridColumn: '1 / 2', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
                 <MiniTextStack
-                  grayText="A loop"
-                  blackText="Repeating again"
+                  grayText="A Loop"
+                  blackText="Repeating Again"
                 />
                 <AnimatedText 
                   color="var(--gray)"
-                  text="What remains visible at the end is rarely the struggle itself, but the faint evidence that it happened at all, the subtle residue of thinking and making that lingers long after the effort has passed. Those traces, small and temporary as they are, often become the only guide forward, quietly suggesting where to reach next and inviting you to continue exploring what was built along the way."
+                  text="Reminants of what is incomplete, evidence of recurring ideas, offcuts and fragments of a missing whole."
                   reverse={true}
                 />
               </div>
@@ -408,9 +407,9 @@ export default function Home() {
 
 
           <SectionLayout>
-            <div style={{ gridColumn: '4 / 6', marginBottom: 'var(--gap)' }}>
+            <div style={{ gridColumn: '3 / 6', marginBottom: 'var(--gap)' }}>
               <AnimatedText 
-                text="Lorem ipsum dolor sit amet consectetur."
+                text="Eventually, the question becomes whether something should be refined at all."
                 className="plarge"
                 reverse={true}
                 tilt={true}
@@ -419,9 +418,9 @@ export default function Home() {
             <div style={{ gridColumn: '2 / 6' }}>
               <MediaBlock image={chalkLandscape2} alt="A stone on a white background" />
             </div>
-            <div style={{ gridColumn: '2 / 3', marginTop: 'var(--gap)' }}>
+            <div style={{ gridColumn: '2 / 4', marginTop: 'var(--gap)' }}>
               <AnimatedText 
-                text="Lorem ipsum dolor sit amet consectetur. Enim tellus condimentum in id enim vel etiam aliquet donec. Amet eget suspendisse et in massa dolor. Enim sed netus integer donec a potenti orci. Aliquam fames amet morbi porta. Aliquam nulla condimentum eget urna morbi convallis. Quis vehicula fames lectus nisi at pulvinar in semper in. Consectetur interdum bibendum quisque quisque risus sed accumsan tortor habitasse. Suspendisse convallis nulla bibendum egestas venenatis suspendisse sit. Quis mauris arcu posuere mattis enim. Interdum eget auctor fermentum euismod at libero fames. Pretium in feugiat viverra feugiat nulla odio."
+                text="What remains visible at the end is rarely the struggle itself, but the faint evidence that it happened at all, the subtle residue of thinking and making that lingers long after the effort has passed. Those traces, small and temporary as they are, often become the only guide forward, quietly suggesting where to reach next and inviting you to continue exploring what was built along the way."
                 reverse={true}
               />            
             </div>
@@ -430,7 +429,7 @@ export default function Home() {
           <SectionLayout>
             <div style={{ gridColumn: '1 / 4', display: 'flex', alignItems: 'flex-end' }}>
               <AnimatedText 
-                text="CHALK, a residue left over after both movement and thought have searched for something to hold."
+                text="Chalk, what remains after both movement and thought have searched for a hold."
                 className={`${"plarge"} ${styles.indentFirstLine2}`}
                 reverse={true}
                 tilt={true}
@@ -450,8 +449,8 @@ export default function Home() {
           <SectionLayout  paddingBottom="0"> 
             <div style={{ gridColumn: '1 / 2', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <MiniTextStack
-                grayText="LOREMIPSUN"
-                blackText="DOLORSIETAMINDS"
+                grayText="Climbing Up"
+                blackText="The Reward For Effort"
               />
               <div className={styles.textSectionWTitle}>
                 <h4>04.</h4>
