@@ -81,7 +81,7 @@ const MediaBlock = ({
       opacity: loaded ? 1 : 0,
       filter: loaded ? 'blur(0px)' : 'blur(12px)',
       scale: loaded ? '1' : '1.13',
-      transition: 'opacity 0.8s ease, filter 0.8s ease, scale 0.8s ease,transform 0.05s linear',
+      transition: 'opacity 0.8s ease, filter 0.8s ease, scale 0.8s ease, transform 0.05s linear',
     } : {
       transition: 'transform 0.05s linear',
     }),

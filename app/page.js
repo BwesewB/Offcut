@@ -108,6 +108,7 @@ export default function Home() {
 
           <SectionLayoutStack
             gap="var(--heightGap)"
+            paddingBottom="0"
             sections={[
               {
                 children: 
@@ -129,7 +130,7 @@ export default function Home() {
                 children:
                   <> 
                     <div style={{ gridColumn: '1 / 6'}}>
-                      <MediaBlock image={PerfectCircle} alt="ww" />
+                      <MediaBlock image={PerfectCircle} alt="2D Circular object" />
                     </div>
                   </>,
               },
@@ -427,7 +428,7 @@ export default function Home() {
           </SectionLayout>
 
           <SectionLayout>
-            <div style={{ gridColumn: '1 / 4', display: 'flex', alignItems: 'flex-end' }}>
+            <div style={{ gridColumn: '1 / 4'}}>
               <AnimatedText 
                 text="Chalk, what remains after both movement and thought have searched for a hold."
                 className={`${"plarge"} ${styles.indentFirstLine2}`}

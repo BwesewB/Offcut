@@ -3,9 +3,7 @@
   grid-template-columns: repeat(5, 1fr);
   column-gap: var(--gap);
   width: 100%;
-  /* border: 1px solid red; */
 }
-
 .sectionWrap {
     /* border: 1px solid blue; */
 }
