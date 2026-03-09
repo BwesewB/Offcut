@@ -45,7 +45,7 @@ export default function Home() {
               <div className={styles.heroContainerTextBottom}>
                 <AnimatedLetters text="OFFCUT" className={styles.title}/>
                 <div className={styles.heroArrow}>
-                  <LottieArrow/>
+                  <LottieArrow immediate />
                 </div>
                 {/* <h2>info</h2> */}
               </div>
@@ -73,9 +73,9 @@ export default function Home() {
                 <>
                   <div className={styles.textSectionWTitle} style={{ gridColumn: '1 / 2'}}>
                     <h4>01.</h4>
-                    <h2>tora</h2>
+                    <h2 style={{marginBottom: "-2%"}}>tora</h2>
                   </div>
-                  <div style={{ gridColumn: '2 / 4'}}>
+                  <div style={{ gridColumn: '2 / 4', display: 'flex', alignItems: 'end' }}>
                     <AnimatedText 
                       text="Each piece begins with a simple volume, then changes through pressure, removal, and restraint. Material is left close to its original form, adjusted only as much as necessary to hold its shape. Rather than aiming for resolution, the process allows surfaces to remain uneven, fractured, and exposed."
                     />
@@ -192,7 +192,12 @@ export default function Home() {
                     {/* <p>When stone is cut, the removed material becomes debitage. These fragments carry information about how the cut was made, including force, precision, and restraint. The surface that remains is shaped as much by what was taken away as by what was left intact.</p> */}
                   </div>
                   <div style={{ gridColumn: '3 / 6'}}>
-                      <MediaBlock image={rock2_1} alt="A stone on a white background" />
+                      <MediaBlock 
+                        image={rock2_1} 
+                        alt="A stone on a white background" 
+                        parallaxScale={1.2}
+                        parallax={true}
+                      />
                   </div>
                 </>,
               },
@@ -209,7 +214,13 @@ export default function Home() {
                         </div>
                       </div>
                       <div style={{ gridColumn: '2 / 3' }}>
-                        <MediaBlock image={rock2vert1} alt="A stone on a white background" width='100%'/>
+                        <MediaBlock 
+                          image={rock2vert1} 
+                          alt="Fragment Stone angle 1" 
+                          width='100%'
+                          parallaxScale={1.1}
+                          parallax={true}
+                        />
                         <div style={{ paddingTop: "var(--gap)" }}>
                           <AnimatedText 
                             text="The process of refining something can slowly move it further from the moment it first appeared. What began as a simple idea becomes layered with decisions made later. Refinement clarifies, but can also erase."
@@ -217,14 +228,32 @@ export default function Home() {
                         </div>
                       </div>
                       <div style={{ gridColumn: '3 / 4' }}>
-                        <MediaBlock image={rock2vert4} alt="A stone on a white background" width='100%'/>
+                        <MediaBlock 
+                          image={rock2vert4} 
+                          alt="Fragment Stone angle 2" 
+                          width='100%'
+                          parallaxScale={1.11}
+                          parallax={true}
+                        />
                       </div>
                       <div style={{ gridColumn: '4 / 5' }}>
-                        <MediaBlock image={rock2vert2} alt="A stone on a white background" width='100%'/>
+                        <MediaBlock 
+                          image={rock2vert2} 
+                          alt="Fragment Stone angle 3" 
+                          width='100%'
+                          parallaxScale={1.12}
+                          parallax={true}
+                        />
                         {/* <p className="pBold" style={{ paddingTop: "var(--gap)" }}>Refinement clarifies, but can also erase.</p> */}
                       </div>
                       <div style={{ gridColumn: '5 / 6' }}>
-                        <MediaBlock image={rock2vert3} alt="A stone on a white background" width='100%'/>
+                        <MediaBlock 
+                          image={rock2vert3} 
+                          alt="Fragment Stone angle 4" 
+                          width='100%'
+                          parallaxScale={1.13}
+                          parallax={true}
+                        />
                       </div>
                   </>,
               },
@@ -278,6 +307,7 @@ export default function Home() {
           
           <SectionLayoutStack
             gap="var(--containerGap)"
+            paddingBottom="0"
             sections={[
               {
                 children: 
@@ -291,7 +321,7 @@ export default function Home() {
                       <h2>bone</h2>
                     </div>
                     <AnimatedText 
-                      text="An idea can begin simply, existing in a state where it does not need to fully explain itself or justify the direction it might eventually take. Over time, however, returning to that same idea introduces new interpretations, and what once felt settled begins to feel open again in ways that were not originally expected. What was once accepted as it was now quietly invites reconsideration."
+                      text="An idea can begin simply, existing in a state where it does not need to fully explain itself or justify the direction it might eventually take. Over time, however, returning to that same idea introduces new interpretations, and what once felt settled begins to feel open again in ways that were not originally expected."
                     />
                   </div>
                 </>,
@@ -306,14 +336,25 @@ export default function Home() {
                       />
                       <AnimatedText
                         color="var(--gray)"
-                        text="With that reconsideration comes the urge to strengthen the thinking behind it, to clarify what it means and shape it into something that feels more deliberate and complete. Each adjustment promises a clearer version of the same idea, yet every change also replaces the moment that existed before it. What began as something simple slowly becomes layered with decisions that arrived later. At some point a quieter question begins to appear, one that is harder to resolve than the changes themselves."
+                        text="With reconsideration comes the urge to strengthen the thinking behind it, to clarify what it means and shape it into something that feels more deliberate and complete. Each adjustment promises a clearer version of the same idea, yet every change also replaces the moment that existed before it. What began as something simple slowly becomes layered with decisions that arrived later. At some point a quieter question begins to appear, one that is harder to resolve than the changes themselves."
                       />
                     </div>
                     <div style={{ gridColumn: '3 / 5' }}>
-                      <MediaBlock image={rock3_2} alt="Rock 3. Fishbone" width='100%'/>
+                      <MediaBlock 
+                        image={rock3_2} 
+                        alt="Rock 3. Fishbone angle 2" 
+                        width='100%'
+                        parallaxScale={1.1}
+                        parallax={true}
+                      />
                     </div>
                     <div style={{ gridColumn: '5 / 6' }}>
-                      <MediaBlock image={rock3_3} alt="Rock 3. Fishbone" />
+                      <MediaBlock 
+                        image={rock3_3} 
+                        alt="Rock 3. Fishbone angle 3" 
+                        parallaxScale={1.2}
+                        parallax={true}
+                      />
                     </div>
                   </>,
               },
@@ -355,14 +396,14 @@ export default function Home() {
             <div style={{ gridColumn: '3 / 4' }}>
 
             </div>
-            <div style={{ gridColumn: '4 / 6' }}>
+            {/* <div style={{ gridColumn: '4 / 6' }}>
               <div style={{ paddingTop: 'var(--gap)' }}>
                 <AnimatedText 
                   text="XXXXXXXXXXXXXXXXXXXXXXXXX "
                   reverse={true}
                 />
               </div>
-            </div>
+            </div> */}
           </SectionLayout>
 
 
@@ -396,7 +437,13 @@ export default function Home() {
               />
             </div>
             <div style={{ gridColumn: '5 / 6' }}>
-              <MediaBlock image={chalk1} alt="A stone on a white background" width='80%' />
+              <MediaBlock 
+                image={chalk1} 
+                alt="White Chalk on a white background" 
+                width='80%' 
+                parallaxScale={1.2}
+                parallax={true}
+              />
             </div>
           </SectionLayout>
 
@@ -412,7 +459,12 @@ export default function Home() {
               </div>          
             </div>
             <div style={{ gridColumn: '3 / 6'}}>
-                <MediaBlock image={chalkLandscape1} alt="A piece of chalk" />
+                <MediaBlock 
+                  image={chalkLandscape1} 
+                  alt="A piece of chalk"
+                  parallaxScale={1.2}
+                  parallax={true} 
+                />
             </div>
             <div style={{ gridColumn: '3 / 5', paddingTop: 'var(--gap)'}}> 
               {/* <AnimatedText 
@@ -420,7 +472,7 @@ export default function Home() {
                 reverse={true}
               /> */}
               <AnimatedText 
-                text="Is the idea becoming stronger through refinement, or simply becoming something different from the moment it first appeared? The process continues either way, circling between the desire to improve what exists and the hesitation to move too far from where it began."
+                text="Does an idea become stronger through refinement, or simply becoming something different from the moment it first appeared? The process continues either way, circling between the desire to improve what exists and the hesitation to move too far from where it began."
                 reverse={true}
               />
             </div>

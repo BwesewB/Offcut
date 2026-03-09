@@ -11,12 +11,14 @@ const MediaBlock = ({
   width,
   style = {},
   parallax = false,
-  parallaxScale = 1.15
+  parallaxScale = 1.15,
+  revealOnLoad = false
 }) => {
   const wrapperRef = useRef(null);
   const imageRef = useRef(null);
   const [offsetY, setOffsetY] = useState(0);
   const [maxTravel, setMaxTravel] = useState(0);
+  const [loaded, setLoaded] = useState(false);
 
   const calculateMaxTravel = useCallback(() => {
     if (!parallax || !imageRef.current) return;
@@ -53,7 +55,6 @@ const MediaBlock = ({
       const distanceFromCenter = elementCenter - viewportCenter;
       const totalTravelDistance = viewportHeight / 2 + rect.height / 2;
 
-      // Maps screen position directly to full available headroom
       setOffsetY((distanceFromCenter / totalTravelDistance) * maxTravel);
     };
 
@@ -71,13 +72,20 @@ const MediaBlock = ({
     wrapperStyle = { width: 'auto', height: '100%' };
   }
 
-  const imageStyle = parallax
-    ? {
-        transform: `translateY(${offsetY}px) scale(${parallaxScale})`,
-        transition: 'transform 0.05s linear',
-        transformOrigin: 'center center',
-      }
-    : {};
+  const imageStyle = {
+    ...(parallax ? {
+      transform: `translateY(${offsetY}px) scale(${parallaxScale})`,
+      transformOrigin: 'center center',
+    } : {}),
+    ...(revealOnLoad ? {
+      opacity: loaded ? 1 : 0,
+      filter: loaded ? 'blur(0px)' : 'blur(12px)',
+      scale: loaded ? '1' : '1.13',
+      transition: 'opacity 0.8s ease, filter 0.8s ease, scale 0.8s ease,transform 0.05s linear',
+    } : {
+      transition: 'transform 0.05s linear',
+    }),
+  };
 
   return (
     <div 
@@ -93,6 +101,7 @@ const MediaBlock = ({
         height={image.height}
         className={styles.mediaImage}
         style={imageStyle}
+        onLoad={() => setLoaded(true)}
       />
     </div>
   );
