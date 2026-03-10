@@ -14,9 +14,10 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <Navbar />
         <div className='bodyWrap'>
-          <SmoothScroll>
+          {/* <SmoothScroll> */}
+          {/* removed because the sentinels wont fire immediatley. either make the sentinels a bit bigger but then that messes up timing*/}
           {children}
-        </SmoothScroll>
+        {/* </SmoothScroll> */}
         </div>
       </body>
     </html>

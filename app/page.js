@@ -22,6 +22,9 @@ import rock3_2 from "/public/images/Rock4-2.png"
 import rock3_3 from "/public/images/Rock4-3.jpg"
 import TextureRock from "/public/images/TextureRockLogo.png"
 import PerfectCircle from "/public/icons/Ellipse2.svg"
+import RockTriplet from "/public/icons/RockTriplet.svg"
+import RockFragment from "/public/icons/RockFragment.svg"
+import ToraRock from "/public/icons/Tora.svg"
 
 import chalk1 from "/public/images/Chalk1.png"
 import chalk2_1 from "/public/images/Chalk2_1.png"
@@ -329,17 +332,20 @@ export default function Home() {
                 children:
                   <> 
                     <div style={{ gridColumn: '2 / 3', display: 'flex', alignItems: "center" }}>
-                      <MediaBlock image={PerfectCircle} alt="2D Circular object" />
+                      <div style={{ marginTop: "calc( var(--layoutSpacing) / 1.3)" }}>
+                        <MediaBlock image={ToraRock} alt="Rock Fragment 1" />
+                      </div>
+                      
                     </div>
                     <div style={{ gridColumn: '3 / 6'}}>
-                      <MediaBlock image={PerfectCircle} alt="2D Circular object" />
+                      <MediaBlock image={RockFragment} alt="Rock Fragment 2" />
                     </div>
                   </>,
               },
               {
                 children:
                   <> 
-                    <div style={{ gridColumn: '2 / 3', display: 'flex', justifyContent: "space-between" }}>
+                    <div style={{ gridColumn: '2 / 3', display: 'flex', justifyContent: "space-between", paddingTop: "var(--heightGap)" }}>
                       {/* <AnimatedText 
                         text="When stone is cut, the removed material becomes debitage. "
                       /> */}
@@ -526,11 +532,16 @@ export default function Home() {
       }
       bottomStripA={
         <SectionLayout minHeight="100lvh" placeItems="end" paddingBottom="0">
-          <div style={{ gridColumn: '1 / 5' }}>
+          <div style={{ gridColumn: '1 / 4', display: 'flex', alignItems: 'end'  }}>
               <p className="plarge">Reaching the end just means you’re close to something worth returning to.</p>
           </div>
-          <div style={{ gridColumn: '5 / 6', display: 'flex', justifyContent: 'flex-end' }}>
-            <LottieArrow rotation={270}/>
+          <div style={{ gridColumn: '4 / 6', display: 'flex', justifyContent: 'flex-end' }}>
+            <div className={styles.rockTriplet}>
+              <MediaBlock
+                image={RockTriplet}
+                alt="Three Rock Shapes"
+              />
+            </div>
           </div>
         </SectionLayout>
       }
