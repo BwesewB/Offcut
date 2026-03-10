@@ -4,6 +4,14 @@
   column-gap: var(--gap);
   width: 100%;
 }
-.sectionWrap {
-    /* border: 1px solid blue; */
+
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: repeat(2, 1fr);
+    --col: calc((100vw - (2 * var(--grid-padding)) - (1 * var(--gap))) / 2);
+  }
+
+  .section > * {
+    grid-column: 1 / -1 !important;
+  }
 }

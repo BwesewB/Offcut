@@ -57,7 +57,7 @@ export default function Home() {
             <h2>info</h2>
             <div className={styles.textSection1a}>
               <AnimatedText 
-                text="Offcut is a personal study of material left in its natural state, shaped but not polished. A further exploration can reveal that value isn't always in what is resolved, but in what resists being made familiar."
+                text="Offcut is a personal study of material left in its natural state, shaped but not polished. The act of polishing can refine a version that feels more certain, but moves further from where it began."
                 className={`${"plarge"} ${styles.indentFirstLine}`}
                 tilt={true}
                 trigger="80%"
@@ -77,7 +77,7 @@ export default function Home() {
                   </div>
                   <div style={{ gridColumn: '2 / 4', display: 'flex', alignItems: 'end' }}>
                     <AnimatedText 
-                      text="Each piece begins with a simple volume, then changes through pressure, removal, and restraint. Material is left close to its original form, adjusted only as much as necessary to hold its shape. Rather than aiming for resolution, the process allows surfaces to remain uneven, fractured, and exposed."
+                      text="Each piece represents a product of natural form, shaped through a specific sequence of events that leaves behind its own story. Rather than refining the result toward completion, the process aims to resist polishing; the human imposition of beauty onto an object that carries its own character."
                     />
                   </div>
                 </>
@@ -192,12 +192,12 @@ export default function Home() {
                     />
                   </div>
                   <div style={{ gridColumn: '3 / 6'}}>
-                      <MediaBlock 
-                        image={rock2_1} 
-                        alt="A stone on a white background" 
-                        parallaxScale={1.2}
-                        parallax={true}
-                      />
+                    <MediaBlock 
+                      image={rock2_1} 
+                      alt="A stone on a white background" 
+                      parallaxScale={1.2}
+                      parallax={true}
+                    />
                   </div>
                 </>,
               },
@@ -304,6 +304,51 @@ export default function Home() {
               />
             </div>
           </SectionLayout>
+
+          <SectionLayoutStack
+            gap="0"
+            paddingBottom="var(--layoutSpacingSmall)"
+            sections={[
+              {
+                children: 
+                <>
+                  <div style={{ gridColumn: '1 / 2'}}>
+                    <MiniTextStack
+                      grayText="Figure 2"
+                      blackText="Fragments of a Missing Whole"
+                    />
+                  </div>
+                  <div style={{ gridColumn: '1 / 3', paddingTop: 'var(--gap)'}}>
+                    <AnimatedText 
+                      text="It is up to us to imagine the existence of something larger, even if its original shape can no longer be formed"
+                    />
+                  </div>
+                </>,
+              },
+              {
+                children:
+                  <> 
+                    <div style={{ gridColumn: '2 / 3', display: 'flex', alignItems: "center" }}>
+                      <MediaBlock image={PerfectCircle} alt="2D Circular object" />
+                    </div>
+                    <div style={{ gridColumn: '3 / 6'}}>
+                      <MediaBlock image={PerfectCircle} alt="2D Circular object" />
+                    </div>
+                  </>,
+              },
+              {
+                children:
+                  <> 
+                    <div style={{ gridColumn: '2 / 3', display: 'flex', justifyContent: "space-between" }}>
+                      {/* <AnimatedText 
+                        text="When stone is cut, the removed material becomes debitage. "
+                      /> */}
+                      <LottieArrow rotation={0} size="6rem"/>
+                    </div>
+                  </>,
+              },
+            ]}
+          />
           
           <SectionLayoutStack
             gap="var(--containerGap)"
@@ -379,7 +424,7 @@ export default function Home() {
                 />
                 <AnimatedText 
                   color="var(--gray)"
-                  text="Reminants of what is incomplete, evidence of recurring ideas, offcuts and fragments of a missing whole."
+                  text="Remnants of what is incomplete, evidence of recurring ideas, offcuts and fragments of a missing whole."
                   reverse={true}
                 />
               </div>

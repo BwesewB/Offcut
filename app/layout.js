@@ -1,4 +1,5 @@
 import "./styles/globals.css";
+import SmoothScroll from "./components/SmoothScroll";
 import Navbar from "./components/molecules/navbar/navbar";
 
 export const metadata = {
@@ -13,7 +14,9 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <Navbar />
         <div className='bodyWrap'>
+          <SmoothScroll>
           {children}
+        </SmoothScroll>
         </div>
       </body>
     </html>
