@@ -1,0 +1,26 @@
+.carouselTrack {
+  display: flex;
+  gap: var(--mobileTextGap);
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-right: 24px;
+  box-sizing: border-box;
+  cursor: grab;
+}
+
+.carouselTrack::-webkit-scrollbar {
+  display: none;
+}
+
+.dragging {
+  cursor: grabbing;
+  scroll-snap-type: none; /* disable snap while dragging for smoothness */
+  user-select: none;
+}
+
+.carouselSlide {
+  flex: 0 0 70vw;
+  /* scroll-snap-align: start; */
+}

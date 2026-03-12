@@ -10,10 +10,11 @@ import MiniTextStack from "../molecules/miniTextStack/miniTextStack";
 import MobileHeaderStack from "../molecules/mobileHeaderStack/mobileHeaderStack";
 import LottieArrow from "/public/icons/ArrowLottie";
 import HoverImage from "../atoms/hoverImage/hoverImage"
+import MobileCarousel from "../molecules/mobileCarousel/mobileCarousel";
 
 import rock1 from "/public/images/LandscapeRock1.png"
 import rock1_2 from "/public/images/LandscapeRock1-2.jpg"
-import rock2 from "/public/images/LandscapeRock2-2.jpg"
+import rock2 from "/public/images/FragmentStonePortrait.png"
 import rock2_1 from "/public/images/LandscapeRock2.jpg"
 import rock2vert1 from "/public/images/Rock3-1.png"
 import rock2vert2 from "/public/images/Rock3-2.png"
@@ -38,6 +39,14 @@ import heroRock from '/public/images/TransparentRockHeroMobile.png';
 
 
 export default function HomeMobile() {
+    const carouselItems = [
+        { image: rock2vert1, alt: 'Fragment Stone angle 1'},
+        { image: rock2vert4, alt: 'Fragment Stone angle 2'},
+        { image: rock2vert2, alt: 'Fragment Stone angle 3'},
+        { image: rock2vert3, alt: 'Fragment Stone angle 4'},
+    ];
+
+
   return (
     <main>
       <ScrollCycle 
@@ -56,7 +65,7 @@ export default function HomeMobile() {
                 </div>
 
                 <SectionLayout paddingBottom="16rem">
-                    <h2 style={{color: "var(--gray)", fontSize: "1.5rem"}}>info</h2>
+                    <h2 style={{color: "var(--gray)", fontSize: "1.5rem", paddingBottom: "var(--mobileTextGap)"}}>info</h2>
                     <div style={{ gridColumn: '1 / 5' }}>
                         <AnimatedText 
                             text="Offcut is a personal study of material left in its natural state, shaped but not polished. The act of polishing can refine a version that feels more certain, but moves further from where it began."
@@ -87,7 +96,6 @@ export default function HomeMobile() {
                                     <MediaBlock 
                                         image={rock1_2} 
                                         alt="A stone on a white background" 
-                                        parallax={true}
                                     />
                                     
                                 </div>
@@ -101,8 +109,6 @@ export default function HomeMobile() {
                             <div style={{ gridColumn: '1 / 5' }}>
                                 <MediaBlock 
                                     image={rock1} 
-                                    parallaxScale={1.2}
-                                    parallax={true}
                                     alt="A stone on a white background" 
                                 />
                             </div>
@@ -110,6 +116,143 @@ export default function HomeMobile() {
                     },
                     ]}
                 />
+
+                <SectionLayoutStack
+                    gap="4.5rem"
+                    paddingBottom="0"
+                    sections={[
+                        {
+                            children: 
+                            <>
+                            <div style={{ gridColumn: '1 / 5'}}>
+                                <MiniTextStack
+                                grayText="Figure 1"
+                                blackText="A Perfect Circle"
+                                />
+                            </div>
+                            <div style={{ gridColumn: '1 / 5', paddingTop: 'var(--mobileTextGap)'}}>
+                                <AnimatedText 
+                                    text="Every attempt of refinement circles back to the question that created it."
+                                />
+                            </div>
+                            </>,
+                        },
+                        {
+                            children:
+                            <> 
+                                <div style={{ gridColumn: '1 / 6'}}>
+                                    <MediaBlock image={PerfectCircle} alt="2D Circular object" />
+                                </div>
+                            </>,
+                        },
+                    ]}
+                />
+
+                <SectionLayout paddingBottom="4.5rem">
+                    <div style={{ gridColumn: '3 / 4', marginTop: '48px' }}>
+                        <LottieArrow rotation={270} size="6rem"/>
+                    </div>
+                </SectionLayout>
+
+                <SectionLayoutStack
+                    gap="2rem"
+                    sections={[
+                            {
+                                children: 
+                                <>
+                                    <MobileHeaderStack
+                                        gridColumn="1 / 5"
+                                        number="2"
+                                        name="fragments"
+                                        text="Moments where ideas briefly take shape."
+                                    />
+                                </>,
+                            },
+                            {
+                                children: 
+                                <>
+                                    <div style={{ gridColumn: '1 / 5'}}>
+                                        <MediaBlock 
+                                            image={rock2} 
+                                            alt="A fragment of a stone" 
+                                        />
+                                    </div>
+                                    
+                                </>,
+                            },
+                        ]}
+                />
+                
+                <SectionLayoutStack
+                    gap="2rem"
+                    sections={[
+                        {
+                            children: 
+                            <>
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <MiniTextStack
+                                        grayText="Stone Chiseling"
+                                        blackText="Debitage"
+                                    />
+                                </div>
+                                <div style={{ gridColumn: '1 / 5', paddingTop: 'var(--mobileTextGap)'}}>
+                                    <AnimatedText 
+                                        text="When stone is cut, the removed material becomes debitage. These fragments carry information about how the cut was made, including force, precision, and restraint. The surface that remains is shaped as much by what was taken away as by what was left intact."
+                                    />
+                                </div>
+                            </>,
+                        },
+                        {
+                            children:
+                            <> 
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <MediaBlock
+                                        image={rock2_1} 
+                                        alt="A stone on a white background" 
+                                    />
+                                </div>
+                            </>,
+                        },
+                    ]}
+                />
+
+                <SectionLayoutStack
+                    gap="4.5rem"
+                    sections={[
+                        {
+                            children: 
+                            <>
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <p className="pBold">Refinement</p>
+                                </div>
+                                <div style={{ gridColumn: '1 / 5', paddingTop: 'var(--mobileTextGap)'}}>
+                                    <AnimatedText 
+                                        text="Over time, small refinements begin to accumulate. Each adjustment improves something, but it also changes the original intention."
+                                    />
+                                </div>
+                            </>,
+                        },
+                        {
+                            children:
+                            <> 
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <MobileCarousel items={carouselItems} />
+                                </div>
+                            </>,
+                        },
+                        {
+                            children:
+                            <> 
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <AnimatedText 
+                                        text="The process of refining something can slowly move it further from the moment it first appeared. What began as a simple idea becomes layered with decisions made later."
+                                    />
+                                </div>
+                            </>,
+                        },
+                    ]}
+                />
+
             </section>
         }
         sectionB={

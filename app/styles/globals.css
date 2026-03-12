@@ -14,7 +14,7 @@
   --containerHeight: clamp(30vw, 40vw, 50vw);
   --col: calc((100vw - (2 * var(--sidePadding)) - (4 * var(--gap))) / 5);
 
-  --mobileTextGap:1.5rem;
+  --mobileTextGap: 1rem; /* 16px */
 
 }
 

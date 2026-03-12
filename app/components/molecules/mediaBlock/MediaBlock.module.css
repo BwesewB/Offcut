@@ -10,6 +10,8 @@
   object-fit: contain;
   object-position: center;
   display: block;
+  user-select: none;
+  -webkit-user-drag: none;
   /* will-change: transform; */
   /* border: 1px solid red; */
 }
