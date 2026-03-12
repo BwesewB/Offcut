@@ -1,11 +1,10 @@
 .carouselTrack {
   display: flex;
-  gap: var(--mobileTextGap);
+  gap: var(--gap);
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  padding-right: 24px;
   box-sizing: border-box;
   cursor: grab;
 }

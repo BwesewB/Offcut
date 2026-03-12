@@ -22,7 +22,7 @@ import rock2vert3 from "/public/images/Rock3-3.png"
 import rock2vert4 from "/public/images/Rock3-4.png"
 import rock3 from "/public/images/LandscapeRock3.jpg"
 import rock3_2 from "/public/images/Rock4-2.png"
-import rock3_3 from "/public/images/Rock4-3.jpg"
+import rock4_3 from "/public/images/Rock4-4.png"
 import TextureRock from "/public/images/TextureRockLogo.png"
 import BoneRocksGroup from "/public/images/BoneRocksGroup.png"
 
@@ -31,12 +31,13 @@ import PerfectCircle from "/public/icons/Ellipse2.svg"
 import FragmentRocksGroup from "/public/icons/FragmentRocksGroup.svg"
 import RockTriplet from "/public/icons/RockTriplet.svg"
 
+import ChalkPortraitFirst from "/public/images/ChalkPortraitFirst.png"
 import chalk1 from "/public/images/Chalk1.png"
 import chalk2_1 from "/public/images/Chalk2_1.png"
 import chalk2_2 from "/public/images/Chalk2_2.png"
-import chalk2_3 from "/public/images/Chalk2_3.png"
+import chalk2_3Long from "/public/images/Chalk2_3Long.png"
 import chalkLandscape1 from "/public/images/ChalkLandscape1.png"
-import chalkLandscape2 from "/public/images/ChalkLandscape2.png"
+import ChalkLandscape2Mobile from "/public/images/ChalkLandscape2Mobile.png"
 import heroRock from '/public/images/TransparentRockHeroMobile.png';
 
 
@@ -126,17 +127,17 @@ export default function HomeMobile() {
                         {
                             children: 
                             <>
-                            <div style={{ gridColumn: '1 / 5'}}>
-                                <MiniTextStack
-                                grayText="Figure 1"
-                                blackText="A Perfect Circle"
-                                />
-                            </div>
-                            <div style={{ gridColumn: '1 / 5', paddingTop: 'var(--mobileTextGap)'}}>
-                                <AnimatedText 
-                                    text="Every attempt of refinement circles back to the question that created it."
-                                />
-                            </div>
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <MiniTextStack
+                                        grayText="Figure 1"
+                                        blackText="A Perfect Circle"
+                                    />
+                                </div>
+                                <div style={{ gridColumn: '1 / 5', paddingTop: 'var(--gap)'}}>
+                                    <AnimatedText 
+                                        text="Every attempt of refinement circles back to the question that created it."
+                                    />
+                                </div>
                             </>,
                         },
                         {
@@ -322,8 +323,8 @@ export default function HomeMobile() {
                                 <>
                                     <div style={{ gridColumn: '1 / 5'}}>
                                         <MediaBlock 
-                                            image={rock2} 
-                                            alt="A fragment of a stone" 
+                                            image={rock4_3} 
+                                            alt="A bone-shaped stone" 
                                         />
                                     </div>
                                     
@@ -382,7 +383,162 @@ export default function HomeMobile() {
 
         sectionB={
             <section className="pageLayout">
-                
+
+                <SectionLayoutStack
+                    gap="3rem"
+                    sections={[
+                        {
+                            children:
+                            <> 
+                            <div style={{ gridColumn: '1 / 5'}}>
+                                <SectionLayout paddingBottom="0">
+                                    <div style={{ gridColumn: "1 / 3"}}>
+                                        <MediaBlock image={chalk2_3Long} alt="A stone on a white background"/>
+                                    </div>
+                                    <div style={{ display: "flex", flexDirection: "column", gap: "var(--gap)", gridColumn: "3 / 5" }}>
+                                        <MediaBlock image={chalk2_2} alt="A stone on a white background" />
+                                        <MediaBlock image={chalk2_1} alt="A stone on a white background" />
+                                    </div>
+                                </SectionLayout>
+                            </div>
+                                
+                            </>,
+                        },
+                        {
+                            children: 
+                            <>
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <MiniTextStack
+                                        grayText="A Loop"
+                                        blackText="Repeating Again"
+                                    />
+                                </div>
+                                <div style={{ gridColumn: '1 / 5', paddingTop: 'var(--gap)'}}>
+                                    <AnimatedText 
+                                        text="Remnants of what is incomplete, evidence of
+                                            recurring ideas, offcuts and fragments of a missing
+                                            whole."
+                                    />
+                                </div>
+                            </>,
+                        },
+                        
+                    ]}
+                />
+
+                <SectionLayoutStack 
+                    gap="2rem"
+                    sections={[
+                        {
+                            children:
+                            <> 
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <MediaBlock 
+                                        image={ChalkLandscape2Mobile} 
+                                        alt="White Chalk on a white background" 
+                                    />
+                                </div>
+                                
+                            </>
+                        },
+                        {
+                            children:
+                            <>
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <AnimatedText 
+                                        text="What remains visible at the end is rarely the struggle itself, 
+                                            but the faint evidence that it happened at all, the subtle residue of 
+                                            thinking and making that lingers long after the effort has passed. Those 
+                                            traces, small and temporary as they are, often become the only guide forward, 
+                                            suggesting where to reach next and inviting you to continue exploring what was built along the way."
+                                        reverse={true}
+                                    />
+                                </div>
+                            </>
+                        },
+                    ]}
+                />
+
+                <SectionLayoutStack 
+                    gap="4.5rem"
+                    sections={[
+                        {
+                            children:
+                            <> 
+                                <div style={{ gridColumn: '2 / 5'}}>
+                                    <MediaBlock 
+                                        image={chalk1} 
+                                        alt="White Chalk on a white background" 
+                                    />
+                                </div>
+                                
+                            </>
+                        },
+                        {
+                            children:
+                            <>
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <AnimatedText 
+                                        text="Chalk, what remains after both movement and thought have searched for a hold."
+                                        className="plarge"
+                                        reverse={true}
+                                        tilt={true}
+                                    />
+                                </div>
+                            </>
+                        },
+                    ]}
+                />
+
+                <SectionLayoutStack 
+                    gap="1.5rem"
+                    paddingBottom="3rem"
+                    sections={[
+                        {
+                            children:
+                            <>
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <MiniTextStack
+                                        grayText="Climbing Up"
+                                        blackText="The Reward for Effort"
+                                    />
+                                </div>
+                                
+                            </>
+                        },
+                        {
+                            children:
+                            <> 
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <MediaBlock
+                                        image={ChalkPortraitFirst} 
+                                        alt="A piece of chalk"
+                                    />
+                                </div>
+                                
+                            </>
+                        },
+                        {
+                            children:
+                            <>
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <AnimatedText 
+                                        text="Does an idea become stronger through refinement, or simply becoming something different from the 
+                                            moment it first appeared? The process continues either way, circling between the desire to improve what
+                                            exists and the hesitation to move too far from where it began."
+                                        reverse={true}
+                                    />
+                                </div>
+                            </>
+                        },
+                    ]}
+                />
+
+                <MobileHeaderStack
+                    gridColumn="1 / 5"
+                    number="4"
+                    name="Chalk"
+                />
             </section>
         }
 
@@ -401,10 +557,11 @@ export default function HomeMobile() {
                 </div>
             </SectionLayout>
         }
+
         topStripB={
-        <div style={{ height: '100%', display: 'grid', placeItems: 'center' }}>
-            <p className="plarge" style={{userSelect: 'none'}}>unf__ished</p>
-        </div>
+            <div style={{ height: '100%', display: 'grid', placeItems: 'center' }}>
+                <p className="plarge" style={{userSelect: 'none'}}>unf__ished</p>
+            </div>
         }
       />
     </main>
