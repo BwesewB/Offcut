@@ -13,6 +13,9 @@
   --layoutSpacingSmall: clamp(5vw, 10vw, 12.5vw);
   --containerHeight: clamp(30vw, 40vw, 50vw);
   --col: calc((100vw - (2 * var(--sidePadding)) - (4 * var(--gap))) / 5);
+
+  --mobileTextGap:1.5rem;
+
 }
 
 html,
@@ -157,4 +160,20 @@ a {
   display: flex;
   flex-direction: column;
   /* gap: var(--layoutSpacing); */
+}
+
+@media (max-width: 480px) {
+  :root {
+    --sidePadding:12px;
+    --gap: 16px;
+    --layoutSpacing: 144px;
+  }
+
+  .plarge {
+    font-size: 2.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }

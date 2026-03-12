@@ -7,11 +7,8 @@
 
 @media (max-width: 768px) {
   .section {
-    grid-template-columns: repeat(2, 1fr);
-    --col: calc((100vw - (2 * var(--grid-padding)) - (1 * var(--gap))) / 2);
+    grid-template-columns: repeat(4, 1fr);
+    --col: calc((100vw - (2 * var(--grid-padding)) - (3 * var(--gap))) / 4);
   }
 
-  .section > * {
-    grid-column: 1 / -1 !important;
-  }
 }

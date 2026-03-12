@@ -48,7 +48,7 @@ export default function Home() {
               <div className={styles.heroContainerTextBottom}>
                 <AnimatedLetters text="OFFCUT" className={styles.title}/>
                 <div className={styles.heroArrow}>
-                  <LottieArrow immediate />
+                  <LottieArrow immediate size="clamp(5rem, 14vw, 8rem)"/>
                 </div>
                 {/* <h2>info</h2> */}
               </div>
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
 
           <SectionLayout minHeight='30lvh'>
-            <h2>info</h2>
+            <h2 style={{color: "var(--gray)"}}>info</h2>
             <div className={styles.textSection1a}>
               <AnimatedText 
                 text="Offcut is a personal study of material left in its natural state, shaped but not polished. The act of polishing can refine a version that feels more certain, but moves further from where it began."
@@ -263,40 +263,6 @@ export default function Home() {
             ]}
           />
 
-          {/* <div className={styles.beakDiv}>
-            <SectionLayout paddingBottom="0">
-              <div style={{ gridColumn: '1 / 2' }}>
-                <AnimatedText 
-                  text="Lorem ipsum dolor sit amet consectetur. Pellentesque in sed sem in lectus vitae. Ipsum integer tincidunt venenatis quis. Enim ac urna nisl ullamcorper purus sollicitudin phasellus. Dictum consequat neque dui dolor consequat consequat integer eget amet. Consequat eget porttitor id at etiam vulputate in vivamus. Mauris aliquam lorem lectus arcu vitae sodales sollicitudin posuere cursus. Vestibulum volutpat commodo amet dolor. "
-                />
-              </div>
-              <div style={{ gridColumn: '3 / 6', display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                <MediaBlock image={rock2_1} alt="A stone on a white background" />
-                <p>1</p>
-              </div>
-            </SectionLayout>
-
-            <SectionLayout paddingBottom="0">
-              <div style={{ gridColumn: '1 / 2' }}>
-                <p>2</p>
-                <MediaBlock image={rock2vert1} alt="A stone on a white background" width='90%'/>
-              </div>
-              <div style={{ gridColumn: '2 / 3' }}>
-                <p>3</p>
-                <MediaBlock image={rock2vert4} alt="A stone on a white background" width='90%'/>
-              </div>
-              <div style={{ gridColumn: '3 / 4' }}>
-                <p>4</p>
-                <MediaBlock image={rock2vert2} alt="A stone on a white background" width='90%'/>
-              </div>
-              <div style={{ gridColumn: '4 / 5' }}>
-                <p>5</p>
-                <MediaBlock image={rock2vert3} alt="A stone on a white background" width='90%'/>
-              </div>
-            </SectionLayout>
-          </div> */}
-
-
           <SectionLayout>
             <div style={{ gridColumn: '1 / 4' }}>
               <AnimatedText 
@@ -315,7 +281,7 @@ export default function Home() {
               {
                 children: 
                 <>
-                  <div style={{ gridColumn: '1 / 2'}}>
+                  <div style={{ gridColumn: '1 / 3'}}>
                     <MiniTextStack
                       grayText="Figure 2"
                       blackText="Fragments of a Missing Whole"
@@ -386,7 +352,7 @@ export default function Home() {
                         blackText="Structure Never Changing"
                       />
                       <AnimatedText
-                        color="var(--gray)"
+                        // color="var(--gray)"
                         text="With reconsideration comes the urge to strengthen the thinking behind it, to clarify what it means and shape it into something that feels more deliberate and complete. Each adjustment promises a clearer version of the same idea, yet every change also replaces the moment that existed before it. What began as something simple slowly becomes layered with decisions that arrived later. Bone is what remains after other layers have changed or disappeared, holding the shape that everything else once formed around."
                       />
                     </div>
@@ -472,7 +438,7 @@ export default function Home() {
             </div>
             <div style={{ gridColumn: '2 / 4', marginTop: 'var(--gap)' }}>
               <AnimatedText 
-                text="What remains visible at the end is rarely the struggle itself, but the faint evidence that it happened at all, the subtle residue of thinking and making that lingers long after the effort has passed. Those traces, small and temporary as they are, often become the only guide forward, quietly suggesting where to reach next and inviting you to continue exploring what was built along the way."
+                text="What remains visible at the end is rarely the struggle itself, but the faint evidence that it happened at all, the subtle residue of thinking and making that lingers long after the effort has passed. Those traces, small and temporary as they are, often become the only guide forward, suggesting where to reach next and inviting you to continue exploring what was built along the way."
                 reverse={true}
               />            
             </div>
@@ -535,7 +501,7 @@ export default function Home() {
           <div style={{ gridColumn: '1 / 4', display: 'flex', alignItems: 'end'  }}>
               <p className="plarge">Reaching the end just means you’re close to something worth returning to.</p>
           </div>
-          <div style={{ gridColumn: '4 / 6', display: 'flex', justifyContent: 'flex-end' }}>
+          <div style={{ gridColumn: '4 / 6', display: 'flex', justifyContent: 'flex-end'}}>
             <div className={styles.rockTriplet}>
               <MediaBlock
                 image={RockTriplet}

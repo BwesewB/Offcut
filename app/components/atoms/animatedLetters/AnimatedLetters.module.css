@@ -1,5 +1,6 @@
 .title {
-    font-size: 10rem;
+    /* font-size: 10rem; */
+    /* font-size: clamp(5rem, 17vw, 10rem); */
     display: inline-block;
     overflow: hidden;
 }

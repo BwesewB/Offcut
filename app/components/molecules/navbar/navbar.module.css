@@ -14,3 +14,9 @@
     padding-left: var(--sidePadding);
     padding-right: var(--sidePadding);
 }
+
+@media (max-width: 480px) {
+    .navbar {
+        height: 3rem;
+    }
+}
