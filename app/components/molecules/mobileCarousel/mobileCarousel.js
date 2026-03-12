@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import MediaBlock from '../MediaBlock/MediaBlock';
+import MediaBlock from '../mediaBlock/MediaBlock';
 import styles from './MobileCarousel.module.css';
 
 export default function MobileCarousel({ items }) {

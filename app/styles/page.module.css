@@ -142,4 +142,8 @@
   .textSection1aMobile {
     grid-column: 1/4;
   }
+
+  .rockTriplet {
+    width: 100%;
+  }
 }

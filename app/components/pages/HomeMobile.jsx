@@ -24,9 +24,11 @@ import rock3 from "/public/images/LandscapeRock3.jpg"
 import rock3_2 from "/public/images/Rock4-2.png"
 import rock3_3 from "/public/images/Rock4-3.jpg"
 import TextureRock from "/public/images/TextureRockLogo.png"
+import BoneRocksGroup from "/public/images/BoneRocksGroup.png"
+
+
 import PerfectCircle from "/public/icons/Ellipse2.svg"
-import RockFragment from "/public/icons/RockFragment.svg"
-import ToraRock from "/public/icons/Tora.svg"
+import FragmentRocksGroup from "/public/icons/FragmentRocksGroup.svg"
 import RockTriplet from "/public/icons/RockTriplet.svg"
 
 import chalk1 from "/public/images/Chalk1.png"
@@ -65,7 +67,7 @@ export default function HomeMobile() {
                 </div>
 
                 <SectionLayout paddingBottom="16rem">
-                    <h2 style={{color: "var(--gray)", fontSize: "1.5rem", paddingBottom: "var(--mobileTextGap)"}}>info</h2>
+                    <h2 style={{color: "var(--gray)", fontSize: "1.5rem", paddingBottom: "var(--gap)"}}>info</h2>
                     <div style={{ gridColumn: '1 / 5' }}>
                         <AnimatedText 
                             text="Offcut is a personal study of material left in its natural state, shaped but not polished. The act of polishing can refine a version that feels more certain, but moves further from where it began."
@@ -195,7 +197,7 @@ export default function HomeMobile() {
                                         blackText="Debitage"
                                     />
                                 </div>
-                                <div style={{ gridColumn: '1 / 5', paddingTop: 'var(--mobileTextGap)'}}>
+                                <div style={{ gridColumn: '1 / 5', paddingTop: 'var(--gap)'}}>
                                     <AnimatedText 
                                         text="When stone is cut, the removed material becomes debitage. These fragments carry information about how the cut was made, including force, precision, and restraint. The surface that remains is shaped as much by what was taken away as by what was left intact."
                                     />
@@ -218,6 +220,7 @@ export default function HomeMobile() {
 
                 <SectionLayoutStack
                     gap="4.5rem"
+                    paddingBottom="16rem"
                     sections={[
                         {
                             children: 
@@ -225,7 +228,7 @@ export default function HomeMobile() {
                                 <div style={{ gridColumn: '1 / 5'}}>
                                     <p className="pBold">Refinement</p>
                                 </div>
-                                <div style={{ gridColumn: '1 / 5', paddingTop: 'var(--mobileTextGap)'}}>
+                                <div style={{ gridColumn: '1 / 5', paddingTop: 'var(--gap)'}}>
                                     <AnimatedText 
                                         text="Over time, small refinements begin to accumulate. Each adjustment improves something, but it also changes the original intention."
                                     />
@@ -252,26 +255,149 @@ export default function HomeMobile() {
                         },
                     ]}
                 />
+                <SectionLayout>
+                    <div style={{ gridColumn: '1 / 5' }}>
+                        <AnimatedText 
+                            text="The longer something exists, the more versions of it begin to accumulate. Each one slightly different from the last."
+                            className="plarge"
+                            tilt={true}
+                            trigger="80%"
+                        />
+                    </div>
+                </SectionLayout>
+
+                <SectionLayoutStack
+                    gap="3rem"
+                    paddingBottom="0"
+                    sections={[
+                        {
+                            children: 
+                            <>
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <MiniTextStack
+                                        grayText="Figure 2"
+                                        blackText="Fragments of a missing whole"
+                                    />
+                                </div>
+                                <div style={{ gridColumn: '1 / 5', paddingTop: 'var(--gap)'}}>
+                                    <AnimatedText 
+                                        text="It is up to us to imagine the existence of something larger, even if its original shape can no longer be formed"
+                                    />
+                                </div>
+                            </>,
+                        },
+                        {
+                            children:
+                            <> 
+                                <div style={{ gridColumn: '1 / 6'}}>
+                                    <MediaBlock image={FragmentRocksGroup} alt="2D Circular object" />
+                                </div>
+                            </>,
+                        },
+                    ]}
+                />
+
+                <SectionLayout>
+                    <div style={{ gridColumn: '2 / 3'}}>
+                        <LottieArrow rotation={0} size="6rem"/>
+                    </div>
+                </SectionLayout>
+
+                <SectionLayoutStack
+                    gap="2rem"
+                    sections={[
+                            {
+                                children: 
+                                <>
+                                    <MobileHeaderStack
+                                        gridColumn="1 / 5"
+                                        number="3"
+                                        name="Bone"
+                                        text="An idea can begin simply, existing in a state where it does not need to fully explain itself or justify the direction it might eventually take. Over time, however, returning to that same idea introduces new interpretations, and what once felt settled begins to feel open again in ways that were not originally expected. What was once accepted as it was now quietly invites reconsideration."
+                                    />
+                                </>,
+                            },
+                            {
+                                children: 
+                                <>
+                                    <div style={{ gridColumn: '1 / 5'}}>
+                                        <MediaBlock 
+                                            image={rock2} 
+                                            alt="A fragment of a stone" 
+                                        />
+                                    </div>
+                                    
+                                </>,
+                            },
+                        ]}
+                />
+
+                <SectionLayoutStack 
+                    gap="3rem"
+                    paddingBottom="0"
+                    sections={[
+                        {
+                            children:
+                            <>
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <MiniTextStack
+                                        grayText="Returning Ideas"
+                                        blackText="Structure Never Changing"
+                                    />
+                                </div>
+                                
+                            </>
+                        },
+                        {
+                            children:
+                            <> 
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <MediaBlock
+                                        image={BoneRocksGroup} 
+                                        alt="two photos of the bone-shaped rock" 
+                                    />
+                                </div>
+                                
+                            </>
+                        },
+                        {
+                            children:
+                            <>
+                                <div style={{ gridColumn: '1 / 5'}}>
+                                    <AnimatedText 
+                                        text="With reconsideration comes the urge to strengthen the thinking behind it, to clarify what it means and
+                                            shape it into something that feels more deliberate and complete. Each adjustment promises a clearer
+                                            version of the same idea, yet every change also replaces the moment that existed before it. What began as 
+                                            something simple slowly becomes layered with decisions that arrived later. Bone is what remains after other 
+                                            layers have changed or disappeared, holding the shape that everything else once formed around."
+                                    />
+                                </div>
+                            </>
+                        },
+                    ]}
+                />
 
             </section>
         }
+
         sectionB={
             <section className="pageLayout">
                 
             </section>
         }
+
         bottomStripA={
-            <SectionLayout minHeight="100lvh" placeItems="end" paddingBottom="0">
-                <div style={{ gridColumn: '1 / 4', display: 'flex', alignItems: 'end'  }}>
-                    <p className="plarge">Reaching the end just means you’re close to something worth returning to.</p>
-                </div>
-                <div style={{ gridColumn: '4 / 6', display: 'flex', justifyContent: 'flex-end'}}>
+            <SectionLayout minHeight="100svh" placeItems="end" paddingBottom="0">
+                <div style={{ gridColumn: '1 / 5', display: 'flex', justifyContent: 'flex-end'}}>
                     <div className={styles.rockTriplet}>
                         <MediaBlock
                             image={RockTriplet}
                             alt="Three Rock Shapes"
                         />
                     </div>
+                </div>
+                <div style={{ gridColumn: '1 / 5', display: 'flex', alignItems: 'end'  }}>
+                    <p className="plarge">Reaching the end just means you’re close to something worth returning to.</p>
                 </div>
             </SectionLayout>
         }

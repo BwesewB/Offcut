@@ -14,7 +14,8 @@
   --containerHeight: clamp(30vw, 40vw, 50vw);
   --col: calc((100vw - (2 * var(--sidePadding)) - (4 * var(--gap))) / 5);
 
-  --mobileTextGap: 1rem; /* 16px */
+  /* --mobileTextGap: 1rem;  */
+  /* 16px */
 
 }
 
@@ -165,8 +166,8 @@ a {
 @media (max-width: 480px) {
   :root {
     --sidePadding:12px;
-    --gap: 16px;
-    --layoutSpacing: 144px;
+    --gap: 1rem;
+    --layoutSpacing: 9rem;
   }
 
   .plarge {
