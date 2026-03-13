@@ -49,7 +49,7 @@ export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStrip
   };
 
   useEffect(() => {
-    const vh = window.innerHeight || 0;
+    const vh = document.documentElement.clientHeight || window.innerHeight || 0;
     setTbHeight(vh);
     window.scrollTo({ top: vh, behavior: 'auto' });
   }, []);
@@ -134,7 +134,7 @@ export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStrip
         {main === 'A' ? sectionA : sectionB}
       </section>
 
-      <section style={{ ...styles.bottomBuffer, height: tbHeight || '100dvh' }}>
+      <section style={{ ...styles.bottomBuffer, height: 'var(--locked-lvh)' }}>
         {bottomStripA}
       </section>
 
@@ -146,7 +146,7 @@ export default function ScrollCycle({ sectionA, sectionB, bottomStripA, topStrip
 
 const styles = {
   page: {
-    minHeight: '100dvh',
+    minHeight: 'var(--locked-vh)',
     display: 'flex',
     flexDirection: 'column',
   },

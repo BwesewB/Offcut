@@ -77,8 +77,8 @@
 }
 
 .heroContainer {
-  height: 100lvh;
-  min-height: 100lvh;
+  position: relative;
+  height: var(--locked-vh);
   width: 100vw;
   display: flex;
   grid-column: 1/6;
@@ -89,6 +89,7 @@
   margin-left: calc(-1 * var(--sidePadding));
   margin-top: -2px;
   margin-bottom: var(--layoutSpacing);
+  /* border: 4px solid red; */
 }
 
 .heroContainerText {

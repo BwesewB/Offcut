@@ -543,7 +543,7 @@ export default function HomeMobile() {
         }
 
         bottomStripA={
-            <SectionLayout minHeight="100svh" placeItems="end" paddingBottom="0">
+            <SectionLayout height="100%" placeItems="end" paddingBottom="0">
                 <div style={{ gridColumn: '1 / 5', display: 'flex', justifyContent: 'flex-end'}}>
                     <div className={styles.rockTriplet}>
                         <MediaBlock
@@ -559,7 +559,7 @@ export default function HomeMobile() {
         }
 
         topStripB={
-            <div style={{ height: '100%', display: 'grid', placeItems: 'center' }}>
+            <div style={{ height: 'var(--locked-vh)', display: 'grid', placeItems: 'center' }}>
                 <p className="plarge" style={{userSelect: 'none'}}>unf__ished</p>
             </div>
         }

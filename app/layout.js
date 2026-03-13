@@ -1,6 +1,7 @@
 import "./styles/globals.css";
 import SmoothScroll from "./components/SmoothScroll";
 import Navbar from "./components/molecules/navbar/navbar";
+import LockVh from "./hooks/LockVh";
 
 export const metadata = {
   title: "Offcut",
@@ -10,16 +11,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body suppressHydrationWarning={true}>
-        <Navbar />
-        <div className='bodyWrap'>
-          {/* <SmoothScroll> */}
-          {/* removed because the sentinels wont fire immediatley. either make the sentinels a bit bigger but then that messes up timing*/}
-          {children}
-        {/* </SmoothScroll> */}
-        </div>
-      </body>
-    </html>
+    <LockVh>
+      <html lang="en">
+        <body suppressHydrationWarning={true}>
+          <Navbar />
+          <div className='bodyWrap'>
+            {children}
+          </div>
+        </body>
+      </html>
+    </LockVh>
   );
 }

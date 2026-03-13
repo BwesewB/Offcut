@@ -51,8 +51,6 @@ export default function MobileCarousel({ items }) {
               image={item.image}
               alt={item.alt}
               width='100%'
-              parallaxScale={item.parallaxScale}
-              parallax={true}
             />
           </div>
         ))}

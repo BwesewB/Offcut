@@ -56,7 +56,7 @@ export default function Home() {
             <HoverImage />
           </div>
 
-          <SectionLayout minHeight='30lvh'>
+          <SectionLayout minHeight='30dvh'>
             <h2 style={{color: "var(--gray)"}}>info</h2>
             <div className={styles.textSection1a}>
               <AnimatedText 
@@ -497,7 +497,7 @@ export default function Home() {
         </section>
       }
       bottomStripA={
-        <SectionLayout minHeight="100lvh" placeItems="end" paddingBottom="0">
+        <SectionLayout minHeight="100dvh" placeItems="end" paddingBottom="0">
           <div style={{ gridColumn: '1 / 4', display: 'flex', alignItems: 'end'  }}>
               <p className="plarge">Reaching the end just means you’re close to something worth returning to.</p>
           </div>
